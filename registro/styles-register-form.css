@@ -1,0 +1,65 @@
+/* Estilos generales */
+body {
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilos de la tarjeta de registro */
+.tarjeta-registro {
+    background-image: linear-gradient(-45deg, #0A8AE7, #7ECBD6); 
+    padding: 1em 2.2em;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    max-width: 700em;
+    color: #fff;
+    display: flex;
+    border-radius: 12px;
+}
+
+.tarjeta-registro h2 {
+    text-align: left;
+    font-size: 35px;
+    margin-bottom: 5px;
+    font-weight: 800;
+    color: #2D5D98;
+}
+
+legend {
+    text-align: left;
+    font-size: 17px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    margin-bottom: -15px;
+}
+
+/* Estilos del formulario */
+.form {
+    background-color: #fff;
+    padding: 5px 30px;
+    margin: 0px -20px;
+    border-radius: 12px;
+    color: #000;
+    width: 60vw;
+    min-width: 300px;
+    max-width: 800px;
+}
+
+fieldset {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+div {
+    display: flex;
+}
+
