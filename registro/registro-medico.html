@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="/registro//styles-register-v2.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container-sm">
+        <div class="container-xs tarjeta-registro">
+            <div class="form-control container form">
+                <div><i>salir</i></div>
+                <div class="row mb-3">
+                    <div class="col">
+                        <h1>Nuevo médico</h1>
+                    </div>
+                    <div class="col">
+                        <div class="form-floating">
+                            <input type="number" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Nro. de Colegiatura</label>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>Información personal</h2>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">                        
+                        <div class="input-group">
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Tipo de documento</button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">DNI</a></li>
+                              <li><a class="dropdown-item" href="#">Pasaporte</a></li>
+                              <li><a class="dropdown-item" href="#">Carnet de extranjería</a></li>
+                            </ul>
+                            <input type="number" class="form-control" aria-label="Text input with dropdown button"  placeholder="420014000" value="420014000">
+                          </div>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <form class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputValue" placeholder="Jeanpool del Piero" value="Jeanpool del Piero">
+                            <label for="floatingInputValue">Nombres</label>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputValue" placeholder="Ibañez Castro" value="Ibañez Castro">
+                            <label for="floatingInputValue">Apellidos</label>
+                        </form>
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <div class="form-floating">
+                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                              <option selected>Seleccionar</option>
+                              <option value="1">Masculino</option>
+                              <option value="2">Femenino</option>
+                            </select>
+                            <label for="floatingSelect">Género</label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <form class="form-floating">
+                            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                            <datalist id="datalistOptions">
+                                <option value="San Francisco">
+                                <option value="New York">
+                                <option value="Seattle">
+                                <option value="Los Angeles">
+                                <option value="Chicago">
+                            </datalist>
+                            <label for="floatingSelect">País de origen</label>
+                        </form>
+                    </div>                    
+                </div>
+                <div class="row mb-2">
+                    <div class="col">
+                        <form class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputValue" placeholder="Jeanpool del Piero" value="Jeanpool del Piero">
+                            <label for="floatingInputValue">Nombres</label>
+                        </form>
+                    </div>
+                    <div class="col">
+                        <form class="form-floating">
+                            <input type="text" class="form-control" id="floatingInputValue" placeholder="Ibañez Castro" value="Ibañez Castro">
+                            <label for="floatingInputValue">Apellidos</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
