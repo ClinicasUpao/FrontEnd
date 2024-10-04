@@ -56,7 +56,7 @@
                 <div class="row mb-2">
                     <div class="col">
                         <div class="form-floating">
-                            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                            <select class="form-select form-select-" id="floatingSelect" aria-label="Floating label select example">
                               <option selected>Seleccionar</option>
                               <option value="1">Masculino</option>
                               <option value="2">Femenino</option>
@@ -80,16 +80,28 @@
                 </div>
                 <div class="row mb-2">
                     <div class="col">
-                        <form class="form-floating">
-                            <input type="text" class="form-control" id="floatingInputValue" placeholder="Jeanpool del Piero" value="Jeanpool del Piero">
-                            <label for="floatingInputValue">Nombres</label>
-                        </form>
-                    </div>
-                    <div class="col">
-                        <form class="form-floating">
-                            <input type="text" class="form-control" id="floatingInputValue" placeholder="Ibañez Castro" value="Ibañez Castro">
-                            <label for="floatingInputValue">Apellidos</label>
-                        </form>
+                        <div class="input-group">
+                            <span class="input-group-text">Fecha de nacimiento</span>
+                            <input type="number" aria-label="First name" class="form-control" placeholder="Día"><div class="form-floating">
+                                <select class="form-select form-select-" id="floatingSelect" aria-label="Floating label select example">
+                                  <option selected>Seleccionar</option>
+                                  <option value="1">Enero</option>
+                                  <option value="2">Febrero</option>
+                                  <option value="3">Marzo</option>
+                                  <option value="4">Abril</option>
+                                  <option value="5">Mayo</option>
+                                  <option value="6">Junio</option>
+                                  <option value="7">Julio</option>
+                                  <option value="8">Agosto</option>
+                                  <option value="9">Septiembre</option>
+                                  <option value="10">Octubre</option>
+                                  <option value="11">Noviembre</option>
+                                  <option value="12">Diciembre</option>
+                                </select>
+                                <label for="floatingSelect">Mes</label>
+                            </div>
+                            <input type="number" aria-label="Last name" class="form-control"  placeholder="Año">
+                        </div>
                     </div>
                 </div>
             </div>
