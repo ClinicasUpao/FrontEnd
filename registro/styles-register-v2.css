@@ -3,120 +3,72 @@ body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 100vh;
     background-color: #f0f0f0;
-}
-
-.container {
-    display: flex;
-    align-items: center;
+    background-image: url(/images/stethoscope-background.png);
+    background-position: center;
 }
 
 /* Estilos de la tarjeta de registro */
 .tarjeta-registro {
-    background-image: linear-gradient(-45deg, #0A8AE7, #7ECBD6); 
-    padding: 10px 35px;
+    background-image: linear-gradient(-45deg, #1F3C88, #7ECBD6); 
+    padding: 13px 13px;
     border-radius: 12px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
     text-align: center;
-    min-width: 400px;
-    max-width: 500px;
-    color: #fff;
-}
-
-.tarjeta-registro h2 {
-    text-align: left;
-    font-size: 15px;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.tarjeta-registro h3 {
-    text-align: center;
-    font-size: 25px;
-    margin-top: 0px;
-    margin-bottom: 10px;
-    font-weight: 700;
-}
-
-/* Estilos de los botones de rol */
-.rol-button {
-    display: inline-block;
-    color: #fff;
-    font-size: 15px;
-    width: 180px;
-    padding: 8px;
-    margin: 0px 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.rol-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
-
-.icon {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    margin-left: -25px;
-    margin-bottom: -3px;
-}
-
-span {
-    text-align: left;    
-}
-
-.paciente {
-    background-color: #479AFF;
-}
-
-.medico {
-    background-color: #2D5D98;
-}
-
-.rol-buttn {
-    display: block;
-    width: 200px;
-    padding: 15px;
-    margin: 10px auto;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-
-/* Estilos del enlace "Ingresa" */
-.tarjeta-registro p {
-    margin-top: 20px;
-    font-size: 14px;
-}
-
-.tarjeta-registro a {
-    color: #fff;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.tarjeta-registro a:hover {
-    text-decoration: underline;
+    margin: auto;
+    max-width: 700px;
 }
 
 /* Estilos del formulario */
 .form {
     background-color: #fff;
-    padding: 10px;
-    margin: 0px -20px;
+    padding: 25px !important;
+    padding-bottom: 3px !important;
     border-radius: 12px;
-    color: #000;
-    width: 500px;
+}
+
+.form h1 {
+    text-align: left;
+    font-size: 35px;
+    font-weight: 800;
+    color: #2D5D98;
+}
+
+.form h2 {
+    text-align: left;
+    font-size: 23px;
+    font-weight: 700;
+    color: #2D5D98;
+}
+
+.tipo-documento, .fecha{
+    border: solid #5DB6CB !important;
+    border-width: 1px !important;
+}
+
+input, select {
+    border: solid #5DB6CB !important;
+    border-width: 1px !important;
+}
+
+input[type="submit"] {
+    display: block;
+    width: 50%;
+    margin: 15px auto;
+    margin-top: 0;
+    border: none !important;
+    border-radius: 12px;
+    height: 2em;
+    font-size: 1.1rem;
+    background-image: linear-gradient(-45deg, #1F3C88, #7ECBD6);
+    min-width: 300px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
