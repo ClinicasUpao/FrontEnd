@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/forms/registro-cita/registros.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Médico | Lista HC</title>
+</head>
+<body>
+    <div class="cita-form-cont">
+        <div class="title-form">
+            <a href="#">
+                <i class='bx bx-chevron-left' ></i>
+                <p>Volver</p>
+            </a>
+            <h2>Nueva Consulta</h2>
+        </div>
+        <form>
+            <label for="name">Paciente:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="service">Tipo de atención:</label>
+            <select id="service" name="service" required>
+                <option value="">Privada - Consultorio</option>
+                <option value="consulta">Consulta externa - Hospital</option>
+                <option value="seguimiento">De seguimiento</option>
+                <option value="otro">Otro</option>
+            </select>
+
+            <label for="service">Dirección:</label>
+            <select id="service" name="service" required>
+                <option value="">Seleccionar</option>
+                <option value="consulta"></option>
+                <option value="seguimiento"></option>
+            </select>
+    
+            <div class="date-info">
+                <div>
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div>
+                    <label for="time">Hora:</label>
+                    <input type="time" id="time" name="time" required>
+                </div>
+            </div>
+        
+            <button type="submit">Crear</button>
+        </form>
+    </div>
+</body>
+</html>

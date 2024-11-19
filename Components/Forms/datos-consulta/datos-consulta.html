@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/forms/datos-consulta/datos-consulta.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Médico | Lista HC</title>
+</head>
+<body>
+    <div class="cita-form-cont">
+        <div class="title-form">
+            <h2>Formulario de atención</h2>
+            <p><strong>Martes 3:00pm - 05/11/2024</strong> con <strong>Diogho Matteo Baylón Toledo</strong></p>
+        </div>
+        <form>
+            <div class="form-group">
+                <div class="item">
+                    <label for="motivo">Motivo:</label>
+                    <input type="text" id="motivo" name="motivo" required>
+                </div>
+                <div class="item">
+                    <label for="cita">Cita:</label>
+                    <select id="cita" name="cita" required>
+                        <option value="" selected>Seleccionar</option>
+                        <option value="nueva" id="nueva" selected>Nueva consulta</option>
+                        <option value="seguimiento" id="seguimiento" selected>De seguimiento</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="center">
+                <div class="form-group-left">
+                    <div class="item">
+                        <label for="anamnesis">Anamnesis:</label>
+                        <textarea id="anamnesis" name="anamnesis" required></textarea>
+                    </div>
+                    <div class="item">
+                        <label for="notas">Notas:</label>
+                        <textarea id="notas" name="notas" required></textarea>
+                    </div>
+                </div>
+    
+                <div class="form-group-right item">
+                    <label for="sintomas">Síntomas:</label>
+                    <textarea id="sintomas" name="sintomas" required></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="item">
+                    <label for="diagnostico">Diagnóstico:</label>
+                    <input type="text" id="diagnostico" name="diagnostico">
+                </div>
+                <div class="item">
+                    <label for="tipo">Tipo:</label>
+                    <select id="tipo" name="tipo" required>
+                        <option value="" selected>Seleccionar</option>
+                        <option value="presuntivo" id="presuntivo" selected>Presuntivo</option>
+                        <option value="definitivo" id="definitivo" selected>Definitivo</option>
+                        <option value="NA" id="NA" selected>Sin diagnóstico</option>
+                    </select>
+
+                </div>
+            </div>
+
+            <hr>
+            
+            <div class="form-group-bottom">
+                <label for="examen">Examen solicitado:</label>
+                <input type="text" id="examen" name="examen">
+                
+                <label for="detalle">Detalle de examen:</label>
+                <textarea id="detalle" name="detalle"></textarea>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-examen">No / Solicitar examen</button>
+                <button type="reset" class="btn-cancel">Cancelar</button>
+                <button type="submit" class="btn-register">Registrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

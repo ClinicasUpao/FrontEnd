@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/NavBar/navBar.css">
+    <link rel="stylesheet" href="catalogo.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Catálogo de Médicos</title>
+    <style>
+        .results {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #e4e9f2;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+            padding: 15px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            max-width: 300px; /* Limitar el tamaño de las tarjetas */
+            margin: 0 auto; /* Centrar las tarjetas */
+            border: 1px solid #3498db;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;  /* Redondeo sutil de las esquinas */
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            font-size: 1.4em;
+            font-weight: 500;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            text-transform: capitalize;
+        }
+
+        .card p {
+            font-size: 0.8rem;
+            color: #7f8c8d;
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .card p strong {
+            color: #34495e;
+            font-weight: 600;
+        }
+
+        .card .card-footer {
+            font-size: 0.9em;
+            margin-top: 15px;
+            text-align: right;
+            color: #95a5a6;
+        }
+
+        .card .card-footer a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .card .card-footer a:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img class="logo" src="/imgs/logo-med.png" alt="">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="catalogo.html">Equipo</a></li>
+            </ul>
+        </nav>
+        <a href="login.html"><button class="sign-in">Ingresar</button></a>
+        <a href="registro.html"><button class="sign-up">Registrarse</button></a>
+        <a href="#"><button class="menu"><i class='bx bx-menu'></i></button></a>
+    </header>
+    <div class="content">
+        <form action="" class="filter">
+            <div class="item">
+                <div class="search">
+                    <input type="text" id="nombre" placeholder="Nombre, apellido o número de colegiatura">
+                    <button type="button" id="buscarBtn">
+                        <i class='bx bx-search'></i>
+                    </button>
+                </div>
+            </div>
+            <div class="item">
+                <select id="especialidad">
+                    <option value="">Especialidad</option>
+                    <option value="medicina_general">Medicina General</option>
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="dermatologia">Dermatología</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="distrito">Distrito:</label>
+                <select id="distrito">
+                    <option value="">Seleccionar</option>
+                    <option value="lima">Lima</option>
+                    <option value="arequipa">Arequipa</option>
+                </select>
+            </div>
+            <div class="item">
+                <label for="experiencia">Experiencia:</label>
+                <input type="number" id="experiencia" min="0" max="50" placeholder="Años">
+            </div>
+        </form>
+        <div id="resultsContainer" class="results">
+            <p>Realiza tu primera búsqueda.</p>
+        </div>
+    </div>
+
+    <script>
+document.getElementById('buscarBtn').addEventListener('click', function() {
+    const nombre = document.getElementById('nombre').value;
+    const especialidad = document.getElementById('especialidad').value;
+    const distrito = document.getElementById('distrito').value;
+    const experiencia = document.getElementById('experiencia').value;
+
+    // Verifica qué valores se están enviando
+    console.log(`Búsqueda: ${nombre}, Especialidad: ${especialidad}, Distrito: ${distrito}, Experiencia: ${experiencia}`);
+
+    // Construir la URL con los parámetros
+    let url = 'http://localhost:8080/api/v1/clinicasUpao/buscar?'; // Cambia esta URL por la de tu backend
+
+    if (nombre) url += `nombre=${encodeURIComponent(nombre)}&`;
+    if (especialidad) url += `especialidad=${encodeURIComponent(especialidad)}&`;
+    if (distrito) url += `distrito=${encodeURIComponent(distrito)}&`;
+    if (experiencia) url += `experiencia=${encodeURIComponent(experiencia)}&`;
+
+    // Eliminar el último '&' si existe
+    url = url.endsWith('&') ? url.slice(0, -1) : url;
+
+    console.log(`URL de búsqueda: ${url}`);
+
+    // Realizar la búsqueda
+    fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        // Verificar si la respuesta es exitosa
+        if (!response.ok) {
+            throw new Error(`Error HTTP: ${response.status}`);
+        }
+        return response.json(); // Aquí obtenemos los datos en formato JSON
+    })
+    .then(data => {
+        console.log(data); // Verifica la estructura de los datos recibidos
+        const resultsContainer = document.getElementById('resultsContainer');
+        if (data.length > 0) {
+            resultsContainer.innerHTML = data.map(medico => `
+                <div class="card">
+                    <img src="${medico.imagenUrl || '/imgs/default-profile.png'}" alt="${medico.nombre} ${medico.apellido}">
+                    <h3>${medico.nombre} ${medico.apellido}</h3>
+                    <p><strong>Distrito:</strong> ${medico.especialidad}</p>
+                    <p><strong>Teléfono:</strong> ${medico.telefono}</p>
+                    <p><strong>Correo:</strong> ${medico.email}</p>
+                    <p><strong>FechaNacimiento:</strong> ${medico.fechaNacimiento}</p>
+                    <p><strong>Colegiatura:</strong> ${medico.colegiatura}</p>
+                    <p><strong>Especialidad:</strong> ${medico.distrito}</p>
+                </div>
+            `).join('');
+        } else {
+            resultsContainer.innerHTML = '<p>No se encontraron médicos.</p>';
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Hubo un error al realizar la búsqueda.');
+    });
+});
+
+    </script>
+</body>
+</html>

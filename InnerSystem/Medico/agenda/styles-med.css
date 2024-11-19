@@ -1,0 +1,166 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Variables */
+:root {
+    --primary-color: #2D5D98;
+}
+
+/* Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+/* ----- MENU ----- */
+.menu-panel {
+    width: 300px;
+    height: 1200px;
+    background-color: #fff;
+    transition: max-width .3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);   
+    z-index: 1;
+}
+
+.logo {
+    padding: 30px 20px;
+    font-size: 40px;
+    font-weight: 600;
+    color: #2D5D98;
+    text-align: center;
+}
+
+.boton {
+    display: flex;
+    align-items: left;
+    /* justify-content: space-between; */
+    width: 85%;
+    padding: 10px;
+    padding-bottom: 7px;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 0 14px 14px 0;
+}
+
+.active {
+    background-color: #2D5D98;
+    color: #fff;
+}
+
+.active:hover {
+    background-color: #2D5D98 !important;
+}
+
+.icon-imagen {
+    width: 22px;
+}
+
+.icon {
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.boton span {
+    font-size: 14px;
+    padding-right: 10px;
+    margin-top: -4px;
+}
+
+.boton:hover {
+    background-color: #e8e8e8;
+}
+
+/* ----- BARRA 1 ----- */
+header {
+    width: 100%;
+}
+
+.barra-1 {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    justify-content: right;
+}
+
+.tarjeta-usuario {
+    display: flex;
+}
+
+.notificaciones {
+    margin-top: 27px;
+}
+
+/**
+.icon-notificaciones {
+    
+}
+**/
+
+.tarjeta-datos {
+    margin: 10px;
+    padding: 10px 70px 10px 20px;
+    font-size: 12px;
+    background-color: #2D5D98;
+    color: #fff;
+    border-radius: 14px 0 0 14px;
+    display: flex;
+}
+
+.icon-rol {
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.icon-rol-imagen {
+    width: 15px;
+}
+
+.nombre {
+    margin-bottom: -2px;
+}
+
+.nombre {
+    font-size: 14px;
+}
+
+.rol {
+    font-size: 9px;
+}
+
+.imagen-usuario {
+    margin-top: 9px;
+    margin-right: 10px;
+    margin-left: -40px;
+}
+
+.icon-user-imagen {
+    width: 55px;
+}
+
+/* ----- BARRA 2 ----- */
+.barra-2 {    
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+}
+
+.mensaje-bienvenida {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.fecha {
+    font-weight: 600;
+    font-size: 14px;
+}
+

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Medico/Perfil-Med/Info/perfil-med.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Médico | Pefil | Info</title>
+</head>
+<body>
+    <nav class="sidebar ">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/logo-med.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Medico/agenda/agenda.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Agenda</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Medico/Lista/listaHC.html">
+                            <i class='bx bxs-book-alt icon'></i>
+                            <span class="text nav-text">Lista de Historias</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="active" href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha">
+                /dd de month, aaaa
+            </div>
+            <div class="card-profile">
+                <img class="med-icon" src="/imgs/med-icon.png" alt="">
+                <div class="text-profile">
+                    <p class="user-text">Matt Denver Stone</p>
+                    <p class="user-text especiality-text">Médico Cirujano</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="perfil">
+            <div class="info-card">
+                <img src="/imgs/profile-2.png" alt="">
+                <p class="nombres">Med. Miguel Eudoro</p>
+                <p class="apellidos">Varas Arteaga</p>
+                <div class="main-data">
+                    <p class="rol">Medico Cirujano</p>
+                    <p class="short-data">Nro. Colegiatura: 400 123 | Experiencia: 6 años</p>
+                </div>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo.
+                </p>
+                <hr>
+                <div class="contact-info">
+                    <p><i class='bx bx-home'></i>Av. Los Juanes No. 2541, Trujillo</p>
+                    <p><i class='bx bx-envelope' ></i>diogho.bt@example.com</p>
+                    <p><i class='bx bx-phone' ></i>+51 900 000 123</p>
+                </div>
+            </div>
+            <div class="column-items">
+                <div class="section-btns">
+                    <button><a href="/InnerSystem/Medico/Perfil-Med/CentrosAtencion/centros-med.html">Centros de Atención</a></button>
+                    <button><a href="/InnerSystem/Medico/Perfil-Med/Estudios/estudios-med.html">Estudios y Experiencia</a></button>
+                </div>
+                <div class="form-card">
+                    <div class="head-card">
+                        <div class="title">Información</div>
+                        <a href=""> Ver Perfil</a>
+                    </div>
+                    <form>
+                        <div class="inline-items">
+                            <div class="item">
+                                <label for="name">Nombres:</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                            <div class="item">
+                                <label for="surname">Apellidos:</label>
+                                <input type="text" id="name" name="name">
+                            </div>
+                        </div>
+                        <div class="inline-items">
+                            <div class="item">
+                                <label for="time">País de nacimiento:</label>
+                                <select id="service" name="service">
+                                    <option value="">Seleccionar</option>
+                                    <option value="peru">Perú</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="item">
+                                <label for="fecha">Fecha de nacimiento:</label>
+                                <div class="birt">
+                                    <input type="date" id="fecha" name="fecha">
+                                    <p>## Años, ## meses, ## días</p>                               
+                                </div>
+                            </div>
+                        </div>
+                        <div class="inline-items">
+                            <div class="item">
+                                <label for="name">Etiquetas:</label>
+                                <input type="text" id="name" name="name" placeholder="Ingresa el texto">
+                                <input type="text" id="name" name="name" placeholder="Ingresa el texto">
+                                <input type="text" id="name" name="name" placeholder="Ingresa el texto">
+                                <button class="btn-etq" type="button" onclick="subirTexto()">Agregar</button>
+                            </div>
+                            <div class="item">
+                                <label for="sintomas">Breve descripción:</label>
+                                <textarea id="sintomas" name="sintomas"></textarea>
+                            </div>
+                        </div>
+    
+                        <hr>
+                        
+                        <label for="name">Dirección:</label>
+                        <input type="text" id="dirección" name="dirección">
+                
+                        <div class="inline-items">
+                            <div class="item">
+                                <label for="name">Correo:</label>
+                                <input type="text" id="dirección" name="dirección">
+                            </div>
+                            <div class="item">
+                                <label for="name">Teléfono:</label>
+                                <input type="text" id="dirección" name="dirección">
+                            </div>
+                        </div>
+                
+                        <button type="submit">Guardar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Medico/Perfil-Med/Estudios/estudios-med.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Médico | Perfil | Centros</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/logo-med.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Agenda</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Medico/ListaHC/listaHC.html">
+                            <i class='bx bxs-book-alt icon'></i>
+                            <span class="text nav-text">Lista de Historias</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a class="active" href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha">
+                /dd de month, aaaa
+            </div>
+            <div class="card-profile">
+                <img class="med-icon" src="/imgs/med-icon.png" alt="">
+                <div class="text-profile">
+                    <p class="user-text">Matt Denver Stone</p>
+                    <p class="user-text especiality-text">Médico Cirujano</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="perfil">
+            <div class="info-card">
+                <img src="/imgs/profile-2.png" alt="">
+                <p class="nombres">Med. Miguel Eudoro</p>
+                <p class="apellidos">Varas Arteaga</p>
+                <div class="main-data">
+                    <p class="rol">Medico Cirujano</p>
+                    <p class="short-data">Nro. Colegiatura: 400 123 | Experiencia: 6 años</p>
+                </div>
+                <p class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo.
+                </p>
+                <hr>
+                <div class="contact-info">
+                    <p><i class='bx bx-home'></i>Av. Los Juanes No. 2541, Trujillo</p>
+                    <p><i class='bx bx-envelope' ></i>diogho.bt@example.com</p>
+                    <p><i class='bx bx-phone' ></i>+51 900 000 123</p>
+                </div>
+            </div>
+            <div class="column-items">
+                <div class="section-btns">
+                    <button><a href="/InnerSystem/Medico/Perfil-Med/Info/perfil-med.html">Información</a></button>
+                    <button><a href="/InnerSystem/Medico/Perfil-Med/CentrosAtencion/centros-med.html">Centros de Atencion</a></button>
+                </div>
+                <div class="form-card">
+                    <div class="head-card">
+                        <div class="title">Estudios y Experiencia</div>
+                        <a href=""> Ver Perfil</a>
+                    </div>
+                    <form action="/ruta_de_registro" method="post">
+                        <!-- Información básica del médico -->
+                        <fieldset>
+                            <legend>Información General</legend>
+                            <div class="inline-items-3">
+                                <div class="item">
+                                    <label for="colegiatura">Nro. de Colegiatura:</label>
+                                    <input type="text" id="colegiatura" name="colegiatura">
+                                </div>
+                                <div class="item">
+                                    <label for="especialidad">Especialidad:</label>
+                                    <input type="text" id="especialidad" name="especialidad">
+                                </div>
+                                <div class="item">
+                                    <label for="especialidad">Sub-Especialidad:</label>
+                                    <input type="text" id="especialidad" name="especialidad">
+                                </div>
+                            </div>
+                        </fieldset>
+                        
+                        <!-- Experiencia Laboral -->
+                        <fieldset class="sub-form">
+                            <legend>Experiencia Laboral</legend>
+                            <div class="left">
+                                <div class="inline-items" id="experiencia-container">  
+                                    <div class="item">
+                                        <label for="cargo">Cargo:</label>
+                                        <input type="text" name="cargo[]" required>
+                                    </div>
+                                    <div class="item">
+                                        <label for="lugar">Lugar de trabajo:</label>
+                                        <input type="text" name="lugar[]" required>
+                                    </div>
+                                </div>
+                                <div class="inline-items" id="experiencia-container">
+                                    <div class="item">
+                                        <label for="periodo">Fecha de inicio:</label>
+                                        <input type="month" id="fecha-inicio" name="fecha_inicio" min="1900-01" max="2099-12" required>
+                                    </div>
+                                    <div class="item">
+                                        <label for="periodo">Fecha de Finalización:</label>
+                                        <input type="month" id="fecha-fin" name="fecha_fin" min="1900-01" max="2099-12" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" onclick="agregarExperiencia()">Agregar</button>
+                            </div>
+                        </fieldset>
+                        <!-- Estudios -->
+                        <fieldset class="sub-form">
+                            <legend>Estudios</legend>
+                            <div class="left">
+                                <div class="inline-items" id="estudios-container">
+                                    
+                                    <div class="item">
+                                        <label for="titulo">Título/Grado:</label>
+                                        <input type="text" name="titulo[]" required>
+                                    </div>
+                                    <div class="item">
+                                        <label for="institucion">Institución:</label>
+                                        <input type="text" name="institucion[]" required>
+                                    </div>
+                                </div>
+                                <div class="inline-items">
+                                    <div class="item">
+                                        <label for="anio-inicio">Fecha de Inicio:</label>
+                                        <input type="month" name="anio_inicio[]" min="1900-01" max="2099-12" required>
+                                    </div>
+                                    <div class="item">
+                                        <label for="anio-finalizacion">Fecha de Finalización:</label>
+                                        <input type="month" name="anio_finalizacion[]" min="1900-01" max="2099-12" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" onclick="agregarEstudio()">Agregar</button>
+                            </div>
+                        </fieldset>
+
+                        <!-- Especialidades -->
+                        <fieldset class="sub-form">
+                            <legend>Especialidades</legend>
+                            <div class="left">
+                                <div class="inline-items" id="especialidades-container">
+                                    <div class="item">
+                                        <label for="especialidad_nombre">Nombre de Especialidad:</label>
+                                        <input type="text" name="especialidad_nombre[]" required>
+                                    </div>
+                                    <div class="item">
+                                        <label for="institucion_especialidad">Institución:</label>
+                                        <input type="text" name="institucion_especialidad[]" required>
+                                    </div>
+                                </div>
+                                <div class="inline-items">
+                                    <div class="item">
+                                        <label for="anio-inicio-especialidad">Fecha de Inicio:</label>
+                                        <input type="month" name="anio_inicio_especialidad[]" min="1900-01" max="2099-12" required>
+                                    </div>
+                                    <div class="item">
+                                        <label for="anio-finalizacion-especialidad">Fecha de Finalización:</label>
+                                        <input type="month" name="anio_finalizacion_especialidad[]" min="1900-01" max="2099-12" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <button type="button" onclick="agregarEspecialidad()">Agregar</button>
+                            </div>
+                        </fieldset>
+
+                    </form>
+                </div>
+            
+                <div class="registros-card">
+                    <div class="form-card">
+                        <div class="head-card">
+                            <div class="title">Experiencia Registrada</div>
+                        </div>
+                        <table>
+                            <!-- Especialidades -->
+                            <tr>
+                                <th colspan="3">Especialidades</th>
+                            </tr>
+                            <tr>
+                                <th>Nombre de Especialidad</th>
+                                <th>Institución</th>
+                                <th>Fecha de Finalización</th>
+                            </tr>
+                            <tr>
+                                <td>Cardiología</td>
+                                <td>Universidad Nacional de Medicina</td>
+                                <td>
+                                    <div class="periodo">
+                                        <span>06 - 2020</span> <button><i class='bx bxs-trash'></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Pediatría</td>
+                                <td>Instituto de Salud y Ciencias</td>
+                                <td>
+                                    <div class="periodo">
+                                        <span>2028 - 11</span> <button><i class='bx bxs-trash'></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                            <!-- Estudios -->
+                            <tr>
+                                <th colspan="3">Estudios</th>
+                            </tr>
+                            <tr>
+                                <th>Institución</th>
+                                <th>Título/Grado</th>
+                                <th>Periodo</th>
+                            </tr>
+                            <tr>
+                                <td>Universidad Nacional Mayor de San Marcos</td>
+                                <td>Doctor en Medicina</td>
+                                <td>
+                                    <div class="periodo">
+                                        <span>2010 - 2016</span> <button><i class='bx bxs-trash'></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Universidad de Salud Pública</td>
+                                <td>Maestría en Salud Pública</td>
+                                <td>
+                                    <div class="periodo">
+                                        <span>2017 - 2019</span> <button><i class='bx bxs-trash'></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                            <!-- Experiencia Laboral -->
+                            <tr>
+                                <th colspan="3">Experiencia Laboral</th>
+                            </tr>
+                            <tr>
+                                <th>Cargo</th>
+                                <th>Lugar de Trabajo</th>
+                                <th>Periodo</th>
+                            </tr>
+                            <tr>
+                                <td>Médico General</td>
+                                <td>Clínica Los Ángeles</td>
+                                <td>
+                                    <div class="periodo">
+                                        <span>2016 - 2018</span> <button><i class='bx bxs-trash'></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Cardiólogo</td>
+                                <td>Hospital General</td>
+                                <td>
+                                    <div class="periodo">
+                                        <span>2018 - Hoy</span> <button><i class='bx bxs-trash'></i></button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+</body>
+</html>

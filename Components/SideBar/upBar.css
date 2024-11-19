@@ -1,0 +1,65 @@
+@import url('/Components/SideBar/sBar_Styles.css');
+
+/* ================================= UpBar ================================= */
+.container {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    left: 250px;
+    width: calc(100% - 250px);
+    transition: var(--tran-05);
+}
+
+.sidebar.close ~ .container {
+    left: 85px;
+    width: calc(100% - 85px);
+}
+
+.upBar {
+    display: flex;
+    z-index: 1;
+    background: var(--sidebar-color);
+    height: 75px;
+    border-bottom: 2px solid var(--lines-color);
+    transition: var(--tran-05);
+    justify-content: space-between;
+    align-items: center;
+}
+.sidebar.close ~ .upBar {
+    width: calc(100% - 85px);
+}
+
+.fecha {
+    font-weight: 600;
+    margin-left: 25px;
+    color: var(--text-color-2);
+    cursor: pointer;
+}
+
+.card-profile {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.card-profile img {
+    height: 60px;
+    border-radius: 50%;    
+    border: 2px solid var(--primary-color);
+    cursor: pointer !important;
+}
+.text-profile {
+    background: var(--primary-color);
+    padding: 6px 40px 7px 12px;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: -15px;
+}
+.user-text {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+}
+.especiality-text {
+    font-size: 10px;
+    font-weight: 400;
+}
+

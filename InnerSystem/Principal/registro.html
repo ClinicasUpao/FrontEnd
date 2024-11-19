@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles-register.css" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tarjeta-registro">
+            <h2>Registro</h2>
+            <h3>Selecciona tu Rol</h3>
+            <button class="rol-button paciente" onclick="window.location.href='registro_paciente.html'">
+                <span class="icon"><img src="user-heart.png" alt="Paciente" class="icon"></span> <span>Paciente</span>
+            </button>
+            <button class="rol-button medico" onclick="window.location.href='registro_medico.html'">
+                <span class="icon"><img src="stethoscope.png" alt="Médico" class="icon"></span> <span>Médico</span>
+            </button>
+            <p>¿Ya tienes una cuenta? <a href="login.html">Ingresa</a></p>
+            
+        </div>
+    </div>
+</body>
+</html>

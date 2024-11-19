@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Paciente/HistorialCitas/historialCitas.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Paciente</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/projectCH_logo.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="active" href="#">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Nueva Cita</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem//Paciente/HistorialCitas/hCitas.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Historial de citas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HClinica/hClinica.html">
+                            <i class='bx bx-task icon'></i>
+                            <span class="text nav-text">Historia Clínica</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Tratamientos/tratamientosP.html">
+                            <i class='bx bxs-capsule icon' ></i>
+                            <span class="text nav-text">Tratamientos</span>
+                        </a> 
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Antecedentes/antcdP.html">
+                            <i class='bx bx-file icon' ></i>
+                            <span class="text nav-text">Antecedentes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Examenes/examenesP.html">
+                            <i class='bx bxs-vial icon' ></i>
+                            <span class="text nav-text">Exámenes</span>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha" id="fecha-actual"></div>
+            <div class="card-profile">
+                <div class="text-profile">
+                    <p class="user-text" id="nombre-paciente"></p>
+                    <p class="user-text especiality-text">Paciente</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="Perfil">
+            </div>
+        </div>
+
+        <div class="register-cita">
+            <h2>Registrar Nueva Cita</h2>
+
+            <!-- Tarjetas para elegir tipo de búsqueda -->
+            <div class="search-cards">
+                <div class="search-card" id="buscar-medico">
+                    <i class='bx bx-user'></i>
+                    <p>Buscar Médico</p>
+                </div>
+                <div class="search-card" id="buscar-especialidad">
+                    <i class='bx bx-briefcase-alt'></i>
+                    <p>Especialidad</p>
+                </div>
+            </div>
+
+            <!-- Formulario para buscar médico -->
+            <form id="form-medico" style="display: none;">
+                <div class="form-group">
+                    <label for="medico">Nombre del Médico</label>
+                    <input type="text" id="medico" class="form-control" placeholder="Nombre del médico">
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha de Atención</label>
+                    <input type="date" id="fecha" class="form-control" required>
+                </div>
+                <div id="horarios-container" class="form-group" style="display: none;">
+                    <label for="horarios">Horarios Disponibles</label>
+                    <div id="horarios" class="btn-group" role="group"></div>
+                </div>
+                <button type="submit" id="submit-cita-medico" class="btn btn-primary">Registrar Cita</button>
+            </form>
+            
+            <!-- Formulario para buscar por especialidad -->
+            <form id="form-especialidad">
+                <div class="form-group">
+                    <label for="especialidad">Seleccione una Especialidad</label>
+                    <select id="especialidad" class="form-control especialidad">
+                        <option value="" selected disabled>Seleccione una especialidad</option>
+                        <option value="cardiologia">Cardiología</option>
+                        <option value="pediatria">Pediatría</option>
+                        <option value="dermatologia">Dermatología</option>
+                    </select>
+                </div>
+                <div id="medicos-especialidad" class="form-group" >
+                    <label for="medico-select">Seleccione un Médico</label>
+                    <select id="medico-select" class="form-control"></select>
+                </div>
+                <div id="horarios-container-especialidad" class="form-group">
+                    <label for="horarios">Horarios Disponibles</label>
+                    <div id="horarios-especialidad" class="btn-group" role="group"></div>
+                </div>
+                <button type="submit" id="submit-cita-especialidad" class="btn btn-primary">Registrar Cita</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Evento para mostrar el formulario de búsqueda por médico
+        document.getElementById("buscar-medico").addEventListener("click", function() {
+            document.getElementById("form-medico").style.display = "block";
+            document.getElementById("form-especialidad").style.display = "none";
+        });
+
+        // Evento para mostrar el formulario de búsqueda por especialidad
+        document.getElementById("buscar-especialidad").addEventListener("click", function() {
+            document.getElementById("form-especialidad").style.display = "block";
+            document.getElementById("form-medico").style.display = "none";
+        });
+
+        // Evento cuando se selecciona una especialidad
+        document.getElementById("especialidad").addEventListener("change", function() {
+            document.getElementById("medicos-especialidad").style.display = "block";
+            loadMedicosByEspecialidad(this.value);
+        });
+
+        // Cargar los médicos disponibles según la especialidad seleccionada
+        function loadMedicosByEspecialidad(especialidad) {
+            fetch(`/api/medicos?especialidad=${especialidad}`)
+                .then(response => response.json())
+                .then(data => {
+                    const medicoSelect = document.getElementById("medico-select");
+                    medicoSelect.innerHTML = "<option value='' disabled selected>Seleccione un médico</option>";
+                    data.forEach(medico => {
+                        const option = document.createElement("option");
+                        option.value = medico.id;
+                        option.textContent = `${medico.nombre} ${medico.apellido}`;
+                        medicoSelect.appendChild(option);
+                    });
+                });
+        }
+
+        document.getElementById("fecha").addEventListener("change", function() {
+            const medicoId = document.getElementById("medico").value;
+            const fecha = this.value;
+            loadHorariosDisponibles(medicoId, fecha);
+        });
+
+        function loadHorariosDisponibles(nombreMedico, fecha) {
+            fetch(`http://localhost:8080/api/v1/paciente/horarios-disponibles?nombreMedico=${nombreMedico}&fecha=${fecha}`)
+
+            .then(response => response.json())
+                .then(data => {
+                    const horariosContainer = document.getElementById("horarios");
+                    horariosContainer.innerHTML = "";
+                    data.forEach(horario => {
+                        const btn = document.createElement("button");
+                        btn.className = "btn btn-secondary";
+                        btn.textContent = horario;
+                        btn.addEventListener("click", function() {
+                            selectHorario(horario);
+                        });
+                        horariosContainer.appendChild(btn);
+                    });
+                    document.getElementById("horarios-container").style.display = "block";
+                });
+        }
+        function selectHorario(horario) {
+            const selectedHorario = document.getElementById("horarios-selected");
+            selectedHorario.textContent = `Horario seleccionado: ${horario}`;
+            document.getElementById("submit-cita-medico").disabled = false;
+        }
+
+    
+        document.getElementById("submit-cita-medico").addEventListener("click", function(event) {
+            event.preventDefault();
+            const medicoId = document.getElementById("medico").value;
+            const fecha = document.getElementById("fecha").value;
+            selectedHorario.textContent = `Horario seleccionado: ${horario}`;
+
+            const pacienteId = getPacienteId(); 
+            
+            const cita = {
+                pacienteId: pacienteId,
+                medicoId: medicoId,
+                fecha: fecha,
+                horario: horario
+            };
+            
+    
+            fetch("/api/citas", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(cita)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert("Cita registrada exitosamente.");
+                resetForm();
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+        // Función para resetear el formulario
+        function resetForm() {
+            document.getElementById("form-medico").reset();
+            document.getElementById("horarios-container").style.display = "none";
+            document.getElementById("submit-cita-medico").disabled = true;
+        }
+    </script>
+
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

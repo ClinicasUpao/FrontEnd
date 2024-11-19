@@ -1,0 +1,448 @@
+@import url('/Components/SideBar/sBar_Styles.css');
+
+/* -------- CONSTANTE en interfaces de PACIENTE -------- */
+/* SideBar */
+.sidebar header .toggle {
+    position: absolute;
+    top: 24%;
+    right: -39px;
+    transform: translate(-50%);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color-med);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #FFF;
+    cursor: pointer;
+}
+.sidebar li a:hover {
+    background-color: var(--primary-color-med);
+}
+.active {
+    background: var(--primary-color-med) !important;
+}
+/* UpBar */
+.card-profile img {
+    height: 60px;
+    border-radius: 50%;    
+    border: 2px solid var(--primary-color-med);
+    cursor: pointer !important;
+}
+.text-profile {
+    background: var(--primary-color-med);
+    padding: 6px 40px 7px 52px;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: -15px;
+    margin-left: 3px;
+}
+.med-icon {
+    position: absolute;
+    padding: 12px;
+    filter: invert(1); /* Cambia el color a blanco */
+    border: none !important;
+}
+/* -------- FIN DE CONSTANTE en interfaces de PACIENTE -------- */
+
+.lista-HC {
+    background: var(--body-color);
+    height: calc(100vh - 75px);
+    left: 250px;
+    transition: var(--tran-05);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 35px;
+    align-items: center;
+    margin: auto;
+    max-width: 1000px;
+}
+.info-antcd {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 15px;
+}
+
+.info-card {
+    background: var(--card-color);
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 320px;
+    color: var(--text-color-4);
+    margin-right: 15px;
+}
+.info-card img {
+    padding: 5px;
+}
+.info-card .nombres {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+.info-card .apellidos {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 5px;
+}
+.main-data {
+    padding: 5px 0;
+    background: rgb(188, 188, 188);
+    text-align: center;
+    translate: -10px;
+    width: calc(100% + 20px);
+}
+.main-data .rol{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.description {
+    padding: 10px;
+}
+.contact-info {
+    padding: 10px;
+}
+.contact-info i {
+    margin-right: 5px;
+}
+.contact-info p {
+    display: flex;
+    align-items: center;
+}
+
+.antcd-card, .registro-atenciones {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-color);
+    border-radius: 16px;
+    color: var(--text-color-4);
+    width: 100%;
+    height: fit-content;
+}
+.lista-HC .title {
+    width: fit-content;
+    font-size: 1.4em;
+    font-weight: 600;
+    background: rgb(188, 188, 188);
+    border-radius: 16px 0 16px 0;
+    padding: 7px 25px;
+    color: #232423;
+}
+
+.antcd-card .head-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.antcd-card .head-card button {
+    text-decoration: none;
+    background: rgb(220, 220, 220);
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 7px;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.antcd-card .head-card button i {
+    margin-right: 7px;
+}
+.antcd-card table {
+    margin: 20px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+.antcd-card th, .antcd-card td {
+    padding: 1px 5px;
+}
+.antcd-card td {
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+}
+.detail {
+    margin: 20px;
+    background: var(--body-card-color-2);
+    border-radius: 10px;
+}
+.detail .up {
+    display: flex;
+    align-items: center;
+}
+.detail .up .title {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-right: 10px;
+    border-radius: 10px 0 10px 0;
+}
+.detail .text {
+    font-size: 0.7em;
+    padding: 10px;
+}
+
+.registro-atenciones .lista-atenciones {
+    padding: 10px 20px;
+}
+.registro-atenciones .btn-new-reg {
+    border: none;
+    margin: auto;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    padding: 5px 15px;
+    transition: all ease 0.3s;
+    margin-top: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.registro-atenciones .btn-new-reg:hover, .antcd-card .head-card button:hover  {
+    background: var(--primary-color-med);
+    color: #FFF;
+}
+.lista-atenciones .item {
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    border: 2px solid rgb(188, 188, 188);
+    border-radius: 12px;
+    z-index: 4;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.lista-atenciones .item:hover {
+    background: var(--card-hover);
+}
+.lista-atenciones .item .fecha-hora {
+    width: fit-content;
+    font-size: 1.1em;
+    font-weight: 600;
+    background: rgb(188, 188, 188);
+    border-radius: 10px 0 10px 10px;
+    padding: 5px 15px;
+    z-index: 6;
+    color: #232423;
+}
+.lista-atenciones .item p {
+    margin-left: 12px;
+}
+.registro-atenciones .detail {
+    display: flex;
+    background: var(--body-card-color-2);
+    display: flex;
+    justify-content: space-between;
+}
+.detail .med-hc {
+    font-size: 0.8em;
+}
+.right {
+    background: #ccc;
+    width: 30%;
+    font-weight: 600;
+    border-radius: 0 10px 10px 0;
+    padding-bottom: 10px;
+}
+.right .sintomas-title {
+    padding-left: 10px;
+    padding-top: 7px;
+    color: #232423;
+}
+.right ul {
+    padding-left: 30px;
+    padding-right: 15px;
+    font-weight: 400;
+    font-size: 0.7em;
+    color: #232423;
+}
+.left {
+    width: 70%;
+}
+.left-center {
+    padding: 5px 15px;
+    font-size: 0.7em;
+}
+.left-bottom {
+    padding: 5px 15px;
+    font-size: 0.9em;
+}
+.up-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ------------------------- Modales ------------------------- */
+#antcd-modal, #datos-cita-modal {
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    align-items: center;
+    justify-content: center;
+    display: none;
+    color: var(--text-color-4);
+    animation: aparecer 0.3s ease; /* Animación de aparición */
+}
+/* Animación de entrada del modal */
+@keyframes aparecer {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+/* Modal antecedentes */
+.cita-form-cont {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background: var(--card-color);
+    padding: 20px 25px;
+    border-radius: 14px;
+    margin: 0 10px;
+    position: relative;
+}
+.cita-form-cont .title-form {
+    display: flex;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cita-form-cont .title-form h2 {
+    font-size: 1.2em;
+    background: var(--toggle-color-2) !important;
+    padding: 6px 15px;
+    border-radius: 14px 0 14px 0;
+}
+.cita-form-cont .title-form p {
+    margin: auto;
+    margin-left: -10px;
+    border: 1px solid var(--toggle-color-2) !important;
+    padding: 8px 15px;
+    padding-left: 20px;
+    border-radius: 0 0 14px 0;
+    padding-top: 9px;
+    font-size: 0.9em;
+}
+.cita-form-cont form {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.cita-form-cont .form-group {
+    display: flex;
+    justify-content: space-between;
+}
+.cita-form-cont .form-group .item {
+    width: 49%;
+}
+.cita-form-cont .center {
+    display: flex;
+    justify-content: space-between;
+}
+.cita-form-cont .center .item {
+    display: flex;
+    flex-direction: column;
+}
+.cita-form-cont .form-group-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 10px;
+}
+.cita-form-cont .form-group-left textarea {
+    height: 100px;
+}
+.cita-form-cont .form-group-right {
+    width: 60%;
+}
+.cita-form-cont .form-group-right textarea {
+    height: 100%;
+}
+.cita-form-cont input,
+.cita-form-cont select,
+.cita-form-cont textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--toggle-color);
+    margin-bottom: 8px;
+}
+.cita-form-cont label {
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.cita-form-cont hr {
+    margin: 10px 0;
+}
+.cita-form-cont .date-info {
+    margin: 5px 0;
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between !important;
+}
+.cita-form-cont button {
+    border: none;
+    width: 25% !important;
+    align-self: center !important;
+    padding: 7px;
+    color: #fff !important;
+    font-weight: 600;
+    background: linear-gradient(135deg, #51A2CF, var(--primary-color)) !important;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cita-form-cont .btn-cancel, .cita-form-cont .btn-examen {
+    background: #797979;
+}
+.cita-form-cont .form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.cita-form-cont button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal datos de la cita */
+
+
+@media (max-width: 699px) {
+    .info-card  {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .info-antcd {
+        display: block;
+    }
+    .registro-atenciones .detail {
+        display: flex;
+    }
+    .left {
+        width: 100%;
+        padding-bottom: 15px;
+    }
+    .right {
+        position: absolute;
+        width: calc(100% - 110px);
+        padding: 0 10px;
+        padding-bottom: 10px;
+        margin-top: 200px;
+        border-radius: 0 0 10px 10px;
+        margin-bottom: 20px;
+    }
+    .registro-atenciones {
+        height: 1000px !important;
+    }
+}

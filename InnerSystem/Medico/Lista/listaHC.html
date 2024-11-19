@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Medico/Lista/listaHC.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Médico | Lista HC</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/logo-med.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Agenda</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a class="active" href="#">
+                            <i class='bx bxs-book-alt icon'></i>
+                            <span class="text nav-text">Lista de Historias</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="/InnerSystem/Medico//Perfil-Med/Info/perfil-med.html">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha">
+                /dd de month, aaaa
+            </div>
+            <div class="card-profile">
+                <img class="med-icon" src="/imgs/med-icon.png" alt="">
+                <div class="text-profile">
+                    <p class="user-text">Matt Denver Stone</p>
+                    <p class="user-text especiality-text">Médico Cirujano</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="lista-HC">
+            <form action="" class="filter">
+                <div class="item">
+                    <div class="search">
+                        <input type="text" id="nombre" placeholder="Nombre, apellido o nro. de documento:">
+                        <button type="button">
+                            <i class='bx bx-search' ></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="item">
+                    <label for="sexo">Sexo:</label>
+                    <select id="sexo">
+                        <option value="masculino">Masculino</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="relevancia">Relevancia:</label>
+                    <select id="relevancia">
+                        <option value="alta">Alta</option>
+                        <option value="media">Media</option>
+                        <option value="baja">Baja</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" placeholder="Ingrese su edad">
+                </div>
+            </form>
+            <div class="main-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombres</th>
+                            <th>Apellidos</th>
+                            <th>Número de DI</th>
+                            <th>Sexo</th>
+                            <th>Edad</th>
+                            <th>Opc.</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Damian Alejandro</td>
+                            <td>Stone del Barrio</td>
+                            <td>DNI: 40002000</td>
+                            <td>Masculino</td>
+                            <td>25 años</td>
+                         
+                            <td><a href="/InnerSystem/Medico/HC-detalles/hc-detalles.html"><i class='bx bx-chevron-right'></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Sarah Daniela</td>
+                            <td>Plasencia Quiroz</td>
+                            <td>DNI: 50002000</td>
+                            <td>Femenino</td>
+                            <td>30 años</td>
+                          
+                            <td><a href=""><i class='bx bx-chevron-right'></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Ana Sofía</td>
+                            <td>García Torres</td>
+                            <td>DNI: 60002000</td>
+                            <td>Femenino</td>
+                            <td>15 años</td>
+                       
+                            <td><a href=""><i class='bx bx-chevron-right'></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Laura Patricia</td>
+                            <td>Morales Espinoza</td>
+                            <td>DNI: 70002000</td>
+                            <td>Femenino</td>
+                            <td>8 años</td>
+                            
+                            <td><a href=""><i class='bx bx-chevron-right'></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Alberto</td>
+                            <td>Sánchez Díaz</td>
+                            <td>DNI: 80002000</td>
+                            <td>Masculino</td>
+                            <td>35 años</td>
+                         
+                            <td><a href=""><i class='bx bx-chevron-right'></i></a></td>
+                        </tr>
+                        <tr>
+                            <td>Sarah Daniela</td>
+                            <td>Plasencia Quiroz</td>
+                            <td>DNI: 90002000</td>
+                            <td>Femenino</td>
+                            <td>30 años</td>
+                           
+                            <td><a href=""><i class='bx bx-chevron-right'></i></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    <script src="listHc.js"></script>
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+</body>
+</html>

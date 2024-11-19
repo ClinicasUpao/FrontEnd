@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ================================= Generales ================================= */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Colors */
+    --body-color: #E4E9F7;
+    --primary-color: #298AFF;
+    --primary-color-med: #2D5D98;
+}
+
+li, a, button {
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 15px;
+    background: rgb(236, 236, 236);
+    height: 65px;
+    box-shadow: 0 5px 15px 1px rgba(0, 0, 0, 0.2);;
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    width: 45px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.nav-links {
+    list-style: none;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+.nav-links li {
+    display: inline-block;
+    padding: 0;
+}
+.nav-links li a {
+    transition: all 0.3s ease 0s;
+    border-radius: 10px;
+    padding: 7px 12px;
+    color: #000;
+}
+.nav-links li a:hover {
+    background: var(--primary-color-med);
+    color: #fff;
+}
+
+header button {
+    border: none;
+    padding: 6px 17px;
+    font-size: 1em;
+    color: #fff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+header button:hover {
+    transform: translateY(-2px); /* Mueve el botón hacia arriba */
+    box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+.sign-in {
+    background: linear-gradient(135deg, #51A2CF, #1F3C88);
+    margin-right: 10px;
+}
+.sign-up {
+    background: linear-gradient(135deg, #A0A0A0, #4E4E4E);
+    margin-right: 10px;
+}
+.menu {
+    color: #000;
+    padding: 5px;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+.menu i {
+    padding: 5px;
+    height: auto;
+}
+
+.content {
+    height: calc(100vh - 65px);
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 900px) {
+    .menu {
+        display: none;
+    }
+}
+@media (max-width: 899px) {
+    .nav-links {
+        display: none;
+    }
+}

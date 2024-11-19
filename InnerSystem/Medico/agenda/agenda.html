@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  rel="stylesheet" href="/InnerSystem/Medico/agenda/styles-med.css">
+    <link  rel="stylesheet" href="/InnerSystem/Medico/agenda/styles-agenda.css">
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/logo-med.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Agenda</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a class="active" href="#">
+                            <i class='bx bxs-book-alt icon'></i>
+                            <span class="text nav-text">Lista de Historias</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            
+            <li class="nav-link">
+                <a href="/InnerSystem/Medico//Perfil-Med/Info/perfil-med.html">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    
+    <header>
+        <div class="barra-1">
+            <div class="notificaciones">
+                <i class="icon-notificaciones"><img src="/imgs/clarity_notification-outline-badged.svg" alt="Icono de notificaciones" class="icon-imagen"></i>
+            </div>
+            <div class="tarjeta-usuario">
+                <div class="tarjeta-datos">
+                    <div class="icon-rol">
+                        <i><img src="/imgs//stethoscope.png" alt="Icono estetoscopio" class="icon-imagen"></i>
+                    </div>
+                    <div class="datos">
+                        <p class="nombre" id="nombreUsuario">Alaba Halahabid</p>
+                        <p class="rol">Médico general</p>                        
+                    </div>
+                </div>
+                <div class="imagen-usuario">
+                    <i><img src="/imgs/user-image-small.svg" alt="Icono de historia clínica" class="icon-user-imagen"></i>
+                </div>
+            </div>
+        </div>
+        <div class="barra-1 barra-2">
+            <div class="mensaje-bienvenida">
+                <p id="mensajeBienvenida">Buenos días Md. Alaba Halahabid</p>
+            </div>
+            <div class="fecha">
+                <p id="fechaActual">/ 14 de noviembre, 2024</p>
+            </div>
+        </div>
+        <div class="agenda">
+            <div class="calendario-y-detalles">
+                <div class="tarjeta calendario">
+                    <div class="mes-navegacion">
+                        <button id="anterior-mes">&lt;</button>
+                        <h2 id="mes-actual"></h2>
+                        <button id="siguiente-mes">&gt;</button>
+                    </div>
+                    <ol class="dias-calendario"></ol>
+                </div>
+                <div class="tarjeta detalles">
+                    <p>Cita con</p>
+                    <h2 id="nombrePaciente"> Damián Leandro Rojas Quiroz</h2>
+                    <p>Deportista | Adulto joven | 27 años</p>
+                    <h2 id="horaCita">De 8:45 a 9:30 am</h2>
+                    <p><strong>Motivo: </strong>Lesión en la pantorrilla izquierda.</p>
+                    <ol>
+                        <li class="nota">
+                            <i><img src="/imgs/warning-circle.svg" class="icono-pequeno" alt="ícono-notificación"></i>
+                            Tal vez se atrase por trabajo.
+                        </li>
+                        <li class="nota">
+                            <i><img src="/imgs/warning-circle.svg" class="icono-pequeno" alt="ícono-notificación"></i>
+                            Tal vez se atrase por trabajo.
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="tarjeta detalles">
+                <div class="botones-modales">
+                    <button id="btn-abrir-crear-cita">Crear Cita</button>
+                    <button id="btn-abrir-crear-intervalo">Crear Intervalo de Trabajo</button>
+                </div>
+                <div class="citas-diarias">
+                    <h3><p><span id="fechaSeleccionada"></span></p></h3>
+                    <div id="citasContainer">
+                    </div>
+                </div>
+<div id="modal-crear-cita" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" id="cerrar-cita">&times;</span>
+        <h2>Crear Cita</h2>
+        <form id="formRegistrarCita">
+            <label for="fechaInicio">Fecha y Hora de la Cita</label>
+            <input type="datetime-local" id="fechaInicio" name="fechaInicio" required>
+            
+            <label for="documentoIdentidad">Documento de Identidad</label>
+            <input type="text" id="documentoIdentidad" name="documentoIdentidad" pattern="[0-9]{8}" title="Ingrese un número de 8 dígitos" required>
+            
+            <button type="submit">Registrar Cita</button>
+        </form>
+    </div>
+</div>
+<div id="modal-crear-intervalo" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" id="cerrar-intervalo">&times;</span>
+        <h2>Crear Intervalo de Trabajo</h2>
+        <form id="form-intervalo">
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" name="fecha" required>
+
+            <label for="tipoAtencion">Tipo de Atención:</label>
+            <select id="tipoAtencion" name="tipoAtencion" required>
+                <option value="CLINICA">Clínica</option>
+                <option value="HOSPITAL">Hospital</option>
+            </select>
+
+            <label for="horaInicio">Hora de Inicio:</label>
+            <input type="time" id="horaInicio" name="horaInicio" required>
+
+            <label for="horaFin">Hora de Fin:</label>
+            <input type="time" id="horaFin" name="horaFin" required>
+
+            <label for="maxCitas">Máximo de Citas:</label>
+            <input type="number" id="maxCitas" name="maxCitas" min="1" required>
+
+            <label for="duracionCita">Duración de Cita (minutos):</label>
+            <input type="number" id="duracionCita" name="duracionCita" min="5" required>
+
+            <button type="submit">Crear Intervalo</button>
+        </form>
+    </div>
+</div>
+
+    </header>
+    
+    <script src="calendario-script.js"></script>
+</body>
+</html>

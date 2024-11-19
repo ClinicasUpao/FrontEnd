@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/forms/datos-consulta/datos-consulta.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Médico | Lista HC</title>
+</head>
+<body>
+    <div class="cita-form-cont">
+        <div class="title-form">
+            <h2>Registro de nuevo antecedente</h2>
+            <p><strong>Martes 3:00pm - 05/11/2024</strong></p>
+        </div>
+        <form>
+            <div class="form-group">
+                <div class="item">
+                    <label for="cita">Tipo:</label>
+                    <select id="cita" name="cita" required>
+                        <option value="" selected>Seleccionar</option>
+                        <option id="personal_patologico" value="personal_patologico">Personal patológico</option>
+                        <option id="familiar" value="familiar">Familiar</option>
+                        <option id="habito_saludable" value="habito_saludable">Hábito saludable</option>
+                        <option id="habito_nocivo" value="habito_nocivo">Hábito nocivo</option>
+                        <option id="viaje" value="viaje">Viaje</option>
+                        <option id="trabajo" value="trabajo">Trabajo</option>
+                        <option id="condicion_psiquiatrica" value="condicion_psiquiatrica">Condición psiquiátrica</option>
+                        <option id="vacuna" value="vacuna">Vacuna</option>
+                        <option id="hospitalizacion" value="hospitalizacion">Hospitalización</option>
+                        <option id="alergia_alimentaria" value="alergia_alimentaria">Alergia alimentaria</option>
+                        <option id="alergia_ambiental" value="alergia_ambiental">Alergia ambiental</option>
+                        <option id="alergia_farmacologica" value="alergia_farmacologica">Alergia farmacológica</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="cita">Estado:</label>
+                    <select id="cita" name="cita" required>
+                        <option value="" selected>Seleccionar</option>
+                        <option id="activo" value="activo">Activo</option>
+                        <option id="inactivo" value="inactivo">Inactivo</option>
+                        <option id="en_observacion" value="en_observacion">En observación</option>
+                        <option id="recuperado" value="recuperado">Recuperado</option>
+                        <option id="cronico" value="cronico">Crónico</option>
+                        <option id="desconocido" value="desconocido">Desconocido</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group-bottom">
+                <label for="examen">Breve descripción:</label>
+                <input type="text" id="examen" name="examen">
+                
+                <label for="detalle">Detalle del antecedente:</label>
+                <textarea id="detalle" name="detalle"></textarea>
+            </div>
+            <div class="form-actions">
+                <button type="reset" class="btn-cancel">Cancelar</button>
+                <button type="submit" class="btn-register">Registrar</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

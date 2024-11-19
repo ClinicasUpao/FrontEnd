@@ -1,0 +1,375 @@
+@import url('/Components/SideBar/sBar_Styles.css');
+
+.historial {
+    background: var(--body-color);
+    height: calc(100vh - 75px);
+    left: 250px;
+    transition: var(--tran-05);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 35px;
+    align-items: center;
+}
+
+h3 {
+    margin-bottom: 5px;
+    color: var(--text-color-2);
+}
+
+.main-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-color);
+    padding: 15px;
+    border-radius: 16px;
+    height: calc(100% - 55px);
+}
+
+.card-body {
+    display: grid;
+    grid-template-columns: 15fr 2fr;
+    justify-content: space-between;
+}
+
+.cita-card {
+    width: 100%;
+    border-radius: 10px 0 0 10px;
+    margin-bottom: 10px;
+    height: fit-content;
+    margin-bottom: 10px;
+    align-self: flex-start;
+}
+.pendiente {
+    background: var(--pendiente-color);
+}
+.pasada {
+    background: var(--pasada-color);
+}
+.falta {
+    background: var(--falta-color);
+}
+
+h5 {
+    position: absolute;
+    font-weight: 400;
+    font-size: 0.8em;
+    background: var(--lines-color);
+    color: var(--text-color-2);
+    padding: 1px 15px;
+    border-radius: 10px 0 10px 0;
+}
+.pendiente h5 {
+    background: var(--pendiente-color-2);
+}
+.pasada h5 {
+    background: var(--pasada-color-2);
+}
+.falta h5 {
+    background: var(--falta-color-2);
+}
+
+.cita-detalles {
+    padding-top: 27px;
+    margin-left: 15px;
+    margin-right: 150px;
+    width: fit-content;
+    padding-bottom: 10px;
+    color: var(--text-color-2);
+}
+p {
+    font-size: 0.7em;
+}
+
+.marco-img {
+    align-self: flex-end;
+    height: calc(100% - 10px);
+    background: #e7e7e7;
+    border-radius: 0 10px 10px 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.marco-img img {
+    width: 45px ;
+}
+
+@media (max-width: 940px) {
+    .cita-detalles {
+        margin-right: 15px;
+    }
+}
+/* Estilo para el botón de "Crear Nueva Cita" */
+.crear-cita {
+    margin: 20px 0;
+    text-align: end;
+}
+
+.btn-crear-cita {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--button-bg-color, ); /* Color de fondo */
+    color: var(--button-text-color, #fff); /* Color del texto */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    text-decoration: none; 
+    margin-right: 20px;
+}
+
+.btn-crear-cita i {
+    margin-right: 8px; /* Espaciado entre el ícono y el texto */
+}
+
+.btn-crear-cita:hover {
+    background-color: var(--button-hover-bg-color, #298AFF); 
+    transform: scale(1.05); /* Efecto de escala */
+}
+
+.btn-crear-cita:focus {
+    outline: none;
+    box-shadow: 0 0 5px var(--button-focus-color, #1F3C88); 
+}
+
+@media (max-width: 940px) {
+    .btn-crear-cita {
+        padding: 8px 15px; /* Ajusta el tamaño del botón en pantallas más pequeñas */
+        font-size: 0.9rem;
+    }
+}
+
+        /* Estilos para el modal */
+        .modal {
+            display: none; /* Ocultamos el modal por defecto */
+            position: fixed;
+            z-index: 1; /* Aseguramos que se muestre por encima de otros elementos */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo oscuro con opacidad */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%; /* Ajusta el ancho según sea necesario */
+            max-width: 500px; /* Limita el tamaño máximo */
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"] {
+            background-color: var(--button-bg-color, #4CAF50);
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button[type="submit"]:hover {
+            background-color: var(--button-hover-bg-color, #45a049);
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+        }
+
+        input[type="date"], input[type="time"] {
+            width: 100%;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+       /* Diseño para la sección de registro de cita */
+.register-cita {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.register-cita h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.card {
+    padding: 20px;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    border-color: #5e72e4;
+    outline: none;
+}
+
+#horarios-container {
+    margin-top: 20px;
+}
+
+#horarios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#horarios button {
+    background-color: #5e72e4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#horarios button:hover {
+    background-color: #4e63d2;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #5e72e4;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #4e63d2;
+}
+
+/* Estilos para la tarjeta de formulario */
+.card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.search-cards {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+.search-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+}
+.search-card i {
+    font-size: 40px;
+    color: #007bff;
+}
+.form-group {
+    margin-top: 20px;
+}
+#form-medico, #form-especialidad, #horarios-container {
+    display: none;
+}
+.especialidad {
+    border-radius: 25px;
+    padding: 10px 20px; 
+    
+}
+.form-control {
+    margin-right: 50px;
+}
+/* Estilo para el botón de cancelar */
+.btn-cancelar {
+    background-color: #e63946;      /* Color rojo llamativo */
+    color: #fff;                    /* Texto blanco */
+    border: none;                   /* Sin borde */
+    padding: 10px 20px;             /* Relleno */
+    border-radius: 5px;             /* Bordes redondeados */
+    cursor: pointer;                /* Cambia el cursor a pointer */
+    font-weight: bold;              /* Texto en negrita */
+    transition: background-color 0.3s, transform 0.2s; /* Animación de transición */
+}
+
+.btn-cancelar:hover {
+    background-color: #d62828;      /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05);         /* Efecto de agrandamiento */
+}
+
+.btn-cancelar:active {
+    background-color: #b71818;      /* Color aún más oscuro al hacer clic */
+    transform: scale(0.95);         /* Efecto de reducción al hacer clic */
+}
+
+        

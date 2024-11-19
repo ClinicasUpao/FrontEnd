@@ -1,0 +1,306 @@
+@import url('/Components/SideBar/sBar_Styles.css');
+
+/* -------- CONSTANTE en interfaces de PACIENTE -------- */
+/* SideBar */
+.sidebar header .toggle {
+    position: absolute;
+    top: 24%;
+    right: -39px;
+    transform: translate(-50%);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #FFF;
+    cursor: pointer;
+}
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+}
+.active {
+    background: var(--primary-color) !important;
+}
+/* UpBar */
+.card-profile img {
+    height: 60px;
+    border-radius: 50%;    
+    border: 2px solid var(--primary-color);
+    cursor: pointer !important;
+}
+.text-profile {
+    background: var(--primary-color);
+    padding: 6px 40px 7px 12px;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: -15px;
+}
+/* -------- FIN DE CONSTANTE en interfaces de PACIENTE -------- */ 
+
+.perfil {
+    background: var(--body-color);
+    height: calc(100vh - 75px);
+    transition: var(--tran-05);
+    display: flex;
+    padding: 15px 35px;
+    margin: auto;
+    max-width: 1250px;
+}
+.column-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.section-btns {
+    display: flex;
+    width: 100%;
+    justify-content: end;
+}
+.section-btns button {
+    border: none;
+    margin-right: 15px;
+    padding: 5px 0;
+    border-radius: 10px 10px 0 0;
+    background: #cccccc;
+    cursor: pointer;
+    transition: ease 0.3s;
+    font-weight: 600;
+}
+.section-btns button:hover {
+    background: var(--primary-color);
+}
+.section-btns button a {
+    text-decoration: none;
+    color: #3a3a3a;
+    padding: 3px 15px;
+}
+.section-btns button a:hover {
+    color: #FFF;
+}
+.info-card {
+    background: var(--card-color);
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 320px;
+    color: var(--text-color-4);
+    margin-right: 15px;
+    height: fit-content;
+}
+.info-card img {
+    padding: 5px;
+}
+.info-card .nombres {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+}
+.info-card .apellidos {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 5px;
+}
+.main-data {
+    padding: 5px 0;
+    background: rgb(188, 188, 188);
+    text-align: center;
+    translate: -10px;
+    width: calc(100% + 20px);
+}
+.main-data .rol {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.description {
+    padding: 10px;
+}
+.contact-info {
+    padding: 10px;
+}
+.contact-info i {
+    margin-right: 5px;
+}
+.contact-info p {
+    display: flex;
+    align-items: center;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-color);
+    border-radius: 16px;
+    color: var(--text-color-4);
+    width: 100%;
+    height: fit-content;
+}
+.form-card .title {
+    width: fit-content;
+    font-size: 1.4em;
+    font-weight: 600;
+    background: rgb(188, 188, 188);
+    border-radius: 16px 0 16px 0;
+    padding: 7px 25px;
+}
+.form-card .head-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-card .head-card a {
+    text-decoration: none;
+    background: rgb(220, 220, 220);
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 7px;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.form-card .head-card a i {
+    margin-right: 7px;
+}
+.form-card .head-card a:hover  {
+    background: var(--primary-color);
+    color: #FFF;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-color);
+    padding: 17px 20px;
+    border-radius: 16px;
+}
+.form-card form .title-form {
+    display: flex;
+    margin-bottom: 5px;
+}
+.form-card form .title-form a {
+    text-decoration: none;
+    color: var(--toggle-color);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    align-self: start;
+    font-size: 1.1em;
+    position: absolute;
+    transition: ease 0.3s;
+}
+.form-card .inline-items {
+    display: flex;
+    justify-content: space-between;
+}
+.form-card .birt {
+    display: flex;
+    align-items: center;
+}
+.form-card .birt input {
+    width: 100%;
+}
+.form-card .birt p {
+    font-size: 0.7em;
+    margin-left: 10px;
+    width: 100%;
+    text-align: right;
+}
+.form-card .item {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+.item textarea {
+    height: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--toggle-color);
+    margin-bottom: 8px;
+}
+.form-card form input,
+.form-card form select {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--toggle-color);
+    margin-bottom: 8px;
+}
+.item .btn-etq {
+    width: 100%;
+    background: var(--toggle-color);
+    margin-top: 0;
+    color: var(--text-color-3);
+}
+.item .btn-etq:hover {
+    background: var(--primary-color);
+    color: #FFF;
+    transform: translateY(0);
+    box-shadow: none;
+}
+.form-card form label {
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.form-card form .date-info {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item textarea {
+    height: 100%;
+}
+
+hr {
+    margin: 15px 0;
+}
+
+.form-card form button {
+    border: none;
+    width: 30%;
+    align-self: center;
+    padding: 7px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(135deg, #51A2CF, var(--primary-color-med));
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.form-card form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 999px) {
+    .perfil {        
+        flex-direction: column;
+        padding: 15px 35px;
+        align-items: center;
+    }
+    .info-card  {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        display: none;
+    }
+    .form-card {
+        margin-bottom: 10px;
+    }
+    .form-card .inline-items {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-card .item {
+        width: 100%;
+    }
+}

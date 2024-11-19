@@ -1,0 +1,495 @@
+@import url('/Components/SideBar/sBar_Styles.css');
+
+/* -------- CONSTANTE en interfaces de PACIENTE -------- */
+/* SideBar */
+.sidebar header .toggle {
+    position: absolute;
+    top: 24%;
+    right: -39px;
+    transform: translate(-50%);
+    height: 25px;
+    width: 25px;
+    background: var(--primary-color-med);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #FFF;
+    cursor: pointer;
+}
+.sidebar li a:hover {
+    background-color: var(--primary-color-med);
+}
+.active {
+    background: var(--primary-color-med) !important;
+}
+/* UpBar */
+.card-profile img {
+    height: 60px;
+    border-radius: 50%;    
+    border: 2px solid var(--primary-color-med);
+    cursor: pointer !important;
+}
+.text-profile {
+    background: var(--primary-color-med);
+    padding: 6px 40px 7px 52px;
+    border-radius: 10px 0px 0px 10px;
+    margin-right: -15px;
+    margin-left: 3px;
+}
+.med-icon {
+    position: absolute;
+    padding: 12px;
+    filter: invert(1); /* Cambia el color a blanco */
+    border: none !important;
+}
+/* -------- FIN DE CONSTANTE en interfaces de PACIENTE -------- */
+
+.perfil {
+    background: var(--body-color);
+    height: calc(100vh - 75px);
+    transition: var(--tran-05);
+    display: flex;
+    padding: 15px 35px;
+    margin: auto;
+    max-width: 1250px;
+}
+.column-items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.section-btns {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.section-btns button {
+    border: none;
+    margin-right: 15px;
+    margin-left: 15px;
+    padding: 5px 0;
+    border-radius: 10px 10px 0 0;
+    background: #cccccc;
+    cursor: pointer;
+    transition: ease 0.3s;
+    font-weight: 600;
+}
+.section-btns button:hover {
+    background: var(--primary-color-med);
+}
+.section-btns button a {
+    text-decoration: none;
+    color: #3a3a3a;
+    padding: 3px 15px;
+}
+.section-btns button a:hover {
+    color: #FFF;
+}
+.info-card {
+    background: var(--card-color);
+    border-radius: 16px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 320px;
+    color: var(--text-color-4);
+    margin-right: 15px;
+    height: fit-content;
+}
+.info-card img {
+    padding: 5px;
+}
+.info-card .nombres {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--primary-color-med);
+    text-align: center;
+}
+.info-card .apellidos {
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--primary-color-med);
+    text-align: center;
+    margin-bottom: 5px;
+}
+.info-card hr {
+    margin: 0;
+}
+.short-data {
+    font-size: 0.8em;
+}
+.main-data {
+    padding: 5px 0;
+    background: rgb(188, 188, 188);
+    text-align: center;
+    translate: -10px;
+    width: calc(100% + 20px);
+}
+.main-data .rol {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+.description {
+    padding: 10px;
+}
+.contact-info {
+    padding: 10px;
+}
+.contact-info i {
+    margin-right: 5px;
+}
+.contact-info p {
+    display: flex;
+    align-items: center;
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-color);
+    border-radius: 16px;
+    color: var(--text-color-4);
+    width: 100%;
+    height: fit-content;
+}
+.form-card .title {
+    width: fit-content;
+    font-size: 1.4em;
+    font-weight: 600;
+    background: rgb(188, 188, 188);
+    border-radius: 16px 0 16px 0;
+    padding: 7px 25px;
+    color: #232323;
+}
+.form-card .head-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-card .head-card a {
+    text-decoration: none;
+    background: rgb(220, 220, 220);
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 7px;
+    margin-top: 5px;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: all ease 0.3s;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+.form-card .head-card a i {
+    margin-right: 7px;
+}
+.form-card .head-card a:hover  {
+    background: var(--primary-color-med);
+    color: #FFF;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-color);
+    padding: 17px 20px;
+    border-radius: 16px;
+}
+.form-card form .title-form {
+    display: flex;
+    margin-bottom: 5px;
+}
+.form-card form .title-form a {
+    text-decoration: none;
+    color: var(--toggle-color);
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    align-self: start;
+    font-size: 1.1em;
+    position: absolute;
+    transition: ease 0.3s;
+}
+.form-card .inline-items {
+    display: flex;
+    justify-content: space-between;
+}
+.form-card .inline-items-3 {    
+    display: flex;
+}
+.inline-items-3 .item:nth-child(1) {
+    flex: 2;
+    box-sizing: border-box;
+}
+.inline-items-3 .item:nth-child(2),
+.inline-items-3 .item:nth-child(3) {
+    flex: 4;
+    margin-left: 10px;
+    box-sizing: border-box;
+}
+.form-card .item {
+    display: flex;
+    flex-direction: column;
+    width: 49%;
+}
+.form-card fieldset {
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.form-card legend {
+    font-weight: 600;
+    background: var(--toggle-color);
+    color: #232323;
+    padding: 0 10px;
+    border-radius: 5px;
+
+}
+.form-card form input,
+.form-card form select {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--toggle-color);
+    margin-bottom: 8px;
+}
+.form-card .sub-form {
+    display: flex;
+}
+.left {
+    flex: 9;
+}
+.right {
+    flex: 1;
+}
+.right button {
+    background: #cccccc !important;
+    color: #000 !important;
+    margin: 0 !important;
+    width: fit-content!important;
+    margin-left: 10px !important;
+    height: 100%;
+}
+.right button:hover {
+    background: var(--primary-color-med) !important;
+    color: #FFF !important;
+    transform: translateY(0px) !important;
+    box-shadow: none !important;
+    transition: ease 0.3s !important;
+}
+.item .btn-etq:hover {
+    background: var(--primary-color-med);
+    color: #FFF;
+    transform: translateY(0);
+    box-shadow: none;
+}
+.form-card form label {
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.form-card form .date-info {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.item textarea {
+    height: 100%;
+}
+
+hr {
+    margin: 15px 0;
+}
+
+.form-card form button {
+    border: none;
+    width: 30%;
+    align-self: center;
+    padding: 7px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(135deg, #51A2CF, var(--primary-color-med));
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.form-card form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+}
+.input-carga {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.input-carga input {
+    width: 80%;
+    margin: 0 !important;
+}
+
+
+.registros-card {
+    width: 100%;
+    margin-top: 10px;
+}
+.registros-card .title {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+.registros-card hr {
+    margin: 10px 15px;
+    margin-top: 0;
+}
+.registros-card table {
+    width: 93%;
+    border-collapse: collapse; /* Elimina el espacio entre las celdas */
+    background-color: #f9f9f9;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilo de las celdas */
+th, td {
+    padding: 5px 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Encabezados de columna */
+th {
+    background-color: rgb(116, 116, 116); /* Verde para el encabezado */
+    color: white;
+    font-weight: bold;
+}
+
+/* Alternar color de filas para mejorar la legibilidad */
+tr:nth-child(even), tr:nth-child(odd) {
+    color: #000;
+}
+
+/* Estilo de las secciones de título */
+tr th[colspan="3"] {
+    background-color: var(--primary-color-med); /* Gris oscuro para secciones */
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Resaltar filas al pasar el ratón por encima */
+tr:hover {
+    background-color: #ddd;
+}
+
+/* Ajustar tamaño de fuente */
+table, th, td {
+    font-size: 14px;
+}
+.periodo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.periodo span {
+    text-align: right;
+}
+.periodo button {
+    text-align: right;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #cfcfcf;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+.periodo button:hover {
+    background: rgb(226, 126, 126);
+    color: #FFF;
+}
+.periodo button i {
+    padding: 5px;
+}
+
+
+
+.centro-card {
+    display: flex;
+    margin: 0 15px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.centro-left {
+    display: flex;
+}
+.centro-info {
+    margin-left: 10px;
+    height: fit-content;
+}
+.centro-img {
+    display: flex;
+}
+.centro-img img {
+    width: 100px;
+    height: auto;
+}
+.centro-info li {
+    font-size: 0.9em;
+    list-style-type: none; 
+}
+.centro-right {
+    display: flex;
+}
+.centro-right button {
+    border: none;
+    width: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: ease 0.3s;
+}
+.centro-right button:hover {
+    background: rgb(226, 126, 126);
+    color: #FFF;
+}
+
+@media (max-width: 999px) {
+    .perfil {        
+        flex-direction: column;
+        padding: 15px 35px;
+        align-items: center;
+    }
+    .info-card  {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+        display: none;
+    }
+    .form-card {
+        margin-bottom: 10px;
+    }
+    .form-card .inline-items {
+        display: flex;
+        flex-direction: column;
+    }
+    .form-card .item {
+        width: 100%;
+    }
+    .form-card .inline-items-3 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .form-card .inline-items-3 .item {
+        margin: 0;
+        flex-grow: 5;
+        width: 100%;
+    }
+}

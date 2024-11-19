@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="sBar_Styles.css">
+    <link rel="stylesheet" href="upBar.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Sidebar</title>
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/projectCH_logo.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Historial de citas</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-task icon'></i>
+                            <span class="text nav-text">Historia Clínica</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-capsule icon' ></i>
+                            <span class="text nav-text">Tratamientos</span>
+                        </a> 
+                    </li><li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-file icon' ></i>
+                            <span class="text nav-text">Antecedentes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-vial icon' ></i>
+                            <span class="text nav-text">Exámenes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha">
+                /dd de month, aaaa
+            </div>
+            <div class="card-profile">
+                <div class="text-profile">
+                    <p class="user-text">Matt Denver Stone</p>
+                    <p class="user-text especiality-text">Paciente</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="historial">
+        </div>
+    </section>
+    <script src="sBar_Script.js"></script>
+</body>
+</html>

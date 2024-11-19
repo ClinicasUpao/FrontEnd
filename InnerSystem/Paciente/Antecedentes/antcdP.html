@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Paciente/Antecedentes/antcdP.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Paciente | Antecedentes</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/projectCH_logo.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HistorialCitas/nuevacita.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Nueva Citas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a  href="/InnerSystem/Paciente/HistorialCitas/hCitas.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Historial de citas</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HClinica/hClinica.html">
+                            <i class='bx bx-task icon'></i>
+                            <span class="text nav-text">Historia Clínica</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Tratamientos/tratamientosP.html">
+                            <i class='bx bxs-capsule icon' ></i>
+                            <span class="text nav-text">Tratamientos</span>
+                        </a> 
+                    </li><li class="nav-link">
+                        <a class="active" href="#">
+                            <i class='bx bx-file icon' ></i>
+                            <span class="text nav-text">Antecedentes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Examenes/examenesP.html">
+                            <i class='bx bxs-vial icon' ></i>
+                            <span class="text nav-text">Exámenes</span>
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha" id="fecha-actual"></div>
+            <div class="card-profile">
+                <div class="text-profile">
+                    <p class="user-text" id="nombre-paciente"></p>
+                    <p class="user-text especiality-text">Paciente</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+
+        <div class="antecedentes">
+            <div class="main-card">
+                <div class="part-one">
+                    <div class="izq">
+                        <img src="/imgs/user-heart.png" alt="">                        
+                        <p>Antecedentes <i class='bx bx-info-circle'></i></p>
+                    </div>
+                    
+                </div>
+                <div class="part-two">
+                    <div class="filter">
+                        <div class="type">
+                            <form>
+                                <input 
+                                    type="text" 
+                                    id="search-input" 
+                                    placeholder="Tipo" 
+                                    aria-label="Tipo" 
+                                    aria-autocomplete="Tipo" 
+                                    aria-controls="autocomplete-results" 
+                                />
+                                <button type="submit" aria-label="Buscar">
+                                    <i class='bx bx-search'></i>
+                                </button>
+                                <ul id="autocomplete-results" role="listbox" aria-label="Resultados de autocompletado"></ul>
+                            </form>
+                        </div>
+                        <div class="fechas">
+                            <label for="fecha">Desde: </label>
+                            <input type="date" id="fecha" name="fecha">
+                            <label for="fecha"> hasta </label>
+                            <input type="date" id="fecha" name="fecha">
+                        </div>
+                    </div>
+
+                    <div class="data">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Registro</th>
+                                    <th>Tipo</th>
+                                    <th>Descripción</th>
+                                    <th>Estado</th>
+                                    <th>Registrado por</th>
+                                    <th>Ver detalle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <script>
+   async function obtenerAntecedentes() {
+            try {
+                const response = await fetch(' http://localhost:8080/api/v1/antecedentes/paciente', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`  
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Error al obtener los antecedentes');
+                }
+
+                const antecedentes = await response.json();  
+
+                const tbody = document.querySelector('.data tbody');
+                tbody.innerHTML = ''; 
+
+                antecedentes.forEach(antecedente => {
+                    const tr = document.createElement('tr');
+                    tr.innerHTML = `
+                        <td>${antecedente.fecha}</td>
+                        <td>${antecedente.tipo}</td>
+                        <td>${antecedente.descripcion}</td>
+                        <td>${antecedente.estado}</td>
+                        <td>${antecedente.registradoPor}</td>
+                        <td><i class='bx bx-chevron-down'></i></td>
+                    `;
+                    tbody.appendChild(tr);
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        function obtenerFechaActual() {
+            const fecha = new Date();
+            const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+            const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+            document.getElementById('fecha-actual').textContent = fechaFormateada;
+        }
+
+    
+        async function obtenerNombrePaciente() {
+            try {
+                const response = await fetch('http://localhost:8080/api/v1/paciente/usuario', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('No se pudo obtener el nombre del paciente');
+                }
+
+                const usuario = await response.json(); 
+                document.getElementById('nombre-paciente').textContent = usuario.nombre;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+      
+        window.onload = () => {
+            obtenerFechaActual();
+            obtenerNombrePaciente();
+            obtenerAntecedentes();
+        };
+    </script>
+
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+</body>
+</html>

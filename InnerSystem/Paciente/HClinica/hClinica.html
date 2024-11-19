@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Paciente/HClinica/hClinica.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Paciente | HC</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/projectCH_logo.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HistorialCitas/nuevacita.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Nueva Citas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HistorialCitas/hCitas.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Historial de citas</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a class="active" href="/InnerSystem/Paciente/HClinica/hClinica.html">
+                            <i class='bx bx-task icon'></i>
+                            <span class="text nav-text">Historia Clínica</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Tratamientos/tratamientosP.html">
+                            <i class='bx bxs-capsule icon' ></i>
+                            <span class="text nav-text">Tratamientos</span>
+                        </a> 
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Antecedentes/antcdP.html">
+                            <i class='bx bx-file icon' ></i>
+                            <span class="text nav-text">Antecedentes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Tratamientos/tratamientosP.html">
+                            <i class='bx bxs-vial icon' ></i>
+                            <span class="text nav-text">Exámenes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha">
+                /dd de month, aaaa
+            </div>
+            <div class="card-profile">
+                <div class="text-profile">
+                    <p class="user-text">Matt Denver Stone</p>
+                    <p class="user-text especiality-text">Paciente</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="h-clinica">
+            <div class="info-antcd">
+                <div class="info-card">
+                    <img src="/imgs/profile-2.png" alt="">
+                    <p class="nombres">Diogho Matteo</p>
+                    <p class="apellidos">Baylon Toledo</p>
+                    <div class="main-data">
+                        <p class="rol">Paciente</p>
+                        <p class="short-data">Adolescente | Masculino | 19 años</p>
+                    </div>
+                    <p class="description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo.
+                    </p>
+                    <hr>
+                    <div class="contact-info">
+                        <p><i class='bx bx-home'></i>Av. Los Juanes No. 2541, Trujillo</p>
+                        <p><i class='bx bx-envelope' ></i>diogho.bt@example.com</p>
+                        <p><i class='bx bx-phone' ></i>+51 900 000 123</p>
+                    </div>
+                </div>
+                <div class="antcd-card">
+                    <div class="title">Antedentes</div>
+                    <table>
+                        <tr>
+                            <th>Registro</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                        </tr>
+                        <tr>
+                            <td>15/12/2024</td>
+                            <td>Personal patológico</td>
+                            <td>Baricela</td>
+                            <td>Con tratamiento</td>
+                        </tr>
+                        <tr>
+                            <td>15/12/2024</td>
+                            <td>Familiar</td>
+                            <td>Hipertensión Arterial</td>
+                            <td>Curado</td>
+                        </tr>
+                        <tr>
+                            <td>15/12/2024</td>
+                            <td>Hábito saludable</td>
+                            <td>Deporte</td>
+                            <td>Con tratamiento</td>
+                        </tr>
+                        <tr>
+                            <td>19/12/2024</td>
+                            <td>Hábito nocivo</td>
+                            <td>Licor</td>
+                            <td>Con recaidas</td>
+                        </tr>
+                        <tr>
+                            <td>19/12/2024</td>
+                            <td>Viaje</td>
+                            <td>Brasil (2 semanas)</td>
+                            <td>Con tratamiento</td>
+                        </tr>
+                        <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Trabajo</td>
+                            <td>Familia de fármacos Aines</td>
+                            <td>Con tratamiento</td>
+                        </tr>
+                        <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Condicón psiquiátrica</td>
+                            <td>Ansiedad generalizada</td>
+                            <td>Con recaidas</td>
+                          </tr>
+                          <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Vacuna</td>
+                            <td>Covid 19 - 3ra dosis</td>
+                            <td>Con recaidas</td>
+                          </tr>
+                          <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Hospitalización</td>
+                            <td>Fisura en el brazo</td>
+                             <td>Con recaidas</td>
+                          </tr>
+                          <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Alergia alimentaria</td>
+                            <td>Nueces</td>
+                            <td>Con recaidas</td>
+                          </tr>
+                          <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Alergia ambiental</td>
+                            <td>Polen</td>
+                            <td>Con recaidas</td>
+                          </tr>
+                          <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Alergia farmacológica</td>
+                            <td>Aines</td>
+                            <td>Con recaidas</td>
+                        </tr>
+                    </table>
+                    <div class="detail">
+                        <div class="up">
+                            <div class="title">Detalle</div>
+                            <div class="med-antcd"><strong>Registrado por:</strong> Med. Alaba Halahabid</div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo, eu ullamcorper urna massa at arcu. Aenean euismod dui urna, id eleifend metus condimentum auctor. Fusce metus metus, aliquam id nunc non.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="registro-atenciones">
+                <div class="title">Registro de Atenciones</div>
+                <div class="lista-atenciones">
+                    <div class="item">
+                        <div class="fecha-hora">Martes 3:00pm - 05/11/2024</div>
+                        <p><strong>Motivo:</strong> Dolor de estómago</p>
+                        <p><strong>Diagnóstico (presuntivo):</strong> Gatritis por Helicobacter</p>
+                    </div>
+                    <div class="item">
+                        <div class="fecha-hora">Martes 3:00pm - 05/11/2024</div>
+                        <p><strong>Motivo:</strong> Dolor de estómago</p>
+                        <p><strong>Diagnóstico (presuntivo):</strong> Gatritis por Helicobacter</p>
+                    </div>
+                    <div class="item">
+                        <div class="fecha-hora">Martes 3:00pm - 05/11/2024</div>
+                        <p><strong>Motivo:</strong> Dolor de estómago</p>
+                        <p><strong>Diagnóstico (presuntivo):</strong> Gatritis por Helicobacter</p>
+                    </div>
+                    <div class="item">
+                        <div class="fecha-hora">Martes 3:00pm - 05/11/2024</div>
+                        <p><strong>Motivo:</strong> Dolor de estómago</p>
+                        <p><strong>Diagnóstico (presuntivo):</strong> Gatritis por Helicobacter</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="left">
+                        <div class="up-center">
+                            <div class="up">
+                                <div class="title">Detalle</div>
+                                <div class="med-hc"><strong>Registrado por:</strong> Med. Alaba Halahabid</div>
+                            </div>
+                            <div class="left-center">
+                                <p><strong>Anamesis:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo, eu ullamcorper urna massa at arcu.</p>
+                                <p><strong>Notas:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo, eu ullamcorper urna massa at arcu
+                                    Fusce metus metus, aliquam id nunc non.massa at arcu. Aenean euismod.</p>
+                            </div>
+                        </div>
+                        <div class="left-bottom">
+                            <p><strong>Analisis solicitado:</strong> Test de aliento.</p>
+                        </div>
+                    </div>
+                    <di class="right">
+                        <div class="sintomas-title">Sintomas:</div>
+                        <ul>
+                            <li>Dolor o malestar en la región epigástrica.</li>
+                            <li>Náuseas frecuentes.</li>
+                            <li>Pérdida de apetito.</li>
+                            <li>Sensación de indigestión y plenitud postprandial.</li>
+                            <li>Eructos aumentados.</li>
+                            <li>Acidez estomacal (pirosis).</li>
+                            <li>Fatiga persistente.</li>
+                            <li>Heces con apariencia oscura o alquitranada.</li>
+                        </ul>
+                    </di>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+</body>
+</html>

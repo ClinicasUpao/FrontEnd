@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* ================================= Generales ================================= */
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --card-color: #fff;
+    --toggle-color: #2D5D98;
+    --toggle-color-2: #DFDFDF;
+    
+    --text-color-1: #000;
+
+}
+
+body.dark {    
+    --card-color: #fff;
+    --toggle-color: #2D5D98;
+}
+
+body {
+    background: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.cita-form-cont {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    background: var(--card-color);
+    padding: 20px 25px;
+    border-radius: 14px;
+    margin: 0 10px;
+    position: relative;
+}
+.cita-form-cont .title-form {
+    display: flex;
+    margin-bottom: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.cita-form-cont .title-form h2 {
+    font-size: 1.2em;
+    background: var(--toggle-color-2);
+    padding: 6px 15px;
+    border-radius: 14px 0 14px 0;
+}
+.cita-form-cont .title-form p {
+    margin: auto;
+    margin-left: -10px;
+    border: 1px solid var(--toggle-color-2);
+    padding: 8px 15px;
+    padding-left: 20px;
+    border-radius: 0 0 14px 0;
+    padding-top: 9px;
+    font-size: 0.9em;
+}
+.cita-form-cont form {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+}
+.cita-form-cont .form-group {
+    display: flex;
+    justify-content: space-between;
+}
+.cita-form-cont .form-group .item {
+    width: 49%;
+}
+.cita-form-cont .center {
+    display: flex;
+    justify-content: space-between;
+
+}
+.cita-form-cont .center .item {
+    display: flex;
+    flex-direction: column;
+}
+.cita-form-cont .form-group-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-right: 10px;
+}
+.cita-form-cont .form-group-left textarea {
+    height: 100px;
+}
+.cita-form-cont .form-group-right {
+    width: 60%;
+}
+.cita-form-cont .form-group-right textarea {
+    height: 100%;
+}
+.cita-form-cont input,
+.cita-form-cont select,
+.cita-form-cont textarea {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--toggle-color);
+    margin-bottom: 8px;
+}
+.cita-form-cont label {
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.cita-form-cont hr {
+    margin: 10px 0;
+}
+.cita-form-cont .date-info {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cita-form-cont button {
+    border: none;
+    width: 25%;
+    align-self: center;
+    padding: 7px;
+    color: #fff;
+    font-weight: 600;
+    background: linear-gradient(135deg, #51A2CF, var(--toggle-color));
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.cita-form-cont .btn-cancel, .cita-form-cont .btn-examen {
+    background: #797979;
+}
+.cita-form-cont .form-actions {
+    display: flex;
+    justify-content: space-between;
+}
+.cita-form-cont button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.2);
+}

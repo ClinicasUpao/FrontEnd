@@ -1,0 +1,129 @@
+@import url('/Components/SideBar/sBar_Styles.css');
+
+.antecedentes {
+    background: var(--body-color);
+    height: calc(100vh - 75px);
+    left: 250px;
+    transition: var(--tran-05);
+    display: flex;
+    flex-direction: column;
+    padding: 15px 35px;
+    align-items: center;
+    color: var(--text-color-2);
+}
+.main-card {
+    width: 100%;
+    max-width: 850px;
+}
+
+.part-one {
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background: var(--head-bar-color);
+    align-items: center;
+    border-radius: 16px 16px 0 0 ;
+    justify-content: space-between;
+}
+.izq {
+    display: flex;
+    align-items: center;
+}
+.part-one img {
+    position: relative;
+    background: #F0F0F0;
+    padding: 10px;
+    border-radius: 16px 0 0 0;
+    width: 70px;
+}
+.part-one p {
+    font-weight: 700;
+    font-size: 1.4em;
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+}
+.part-one i {
+    margin-left: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.opc-button {
+    text-decoration: none;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 8px;
+    padding-right: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+
+.part-two {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    background: var(--card-color);
+    align-items: center;
+    border-radius: 0 0 16px 16px;
+    flex-direction: column;
+}
+.filter {
+    width: 100%;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -10px;
+    max-width: 800px;
+}
+.filter .type {
+    margin-left: 20px;
+    width: 20%;
+}
+input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.filter .type form {
+    display: flex;
+    flex-direction: row;
+}
+.filter .type button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+    border: none;
+    background: none;
+    margin-left: -30px;
+}
+.filter .fechas {
+    text-align: right;
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+.filter .fechas input {
+    margin: 0 5px;
+}
+.data {
+    font-size: 12px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.data table {
+    margin: 15px 15px;
+    border-spacing: 3px;
+    border-collapse: collapse;
+}
+.data th, .data td {
+    padding: 1px 5px;
+}
+.data td {
+    border-top: 1px solid #ccc;
+}

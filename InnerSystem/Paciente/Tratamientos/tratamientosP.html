@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Paciente/Tratamientos/tratamientosP.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Paciente | Tratamientos</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/projectCH_logo.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HistorialCitas/nuevacita.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Nueva Citas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HistorialCitas/hCitas.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Historial de citas</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HClinica/hClinica.html">
+                            <i class='bx bx-task icon'></i>
+                            <span class="text nav-text">Historia Clínica</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="active" href="#">
+                            <i class='bx bxs-capsule icon' ></i>
+                            <span class="text nav-text">Tratamientos</span>
+                        </a> 
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Antecedentes/antcdP.html">
+                            <i class='bx bx-file icon' ></i>
+                            <span class="text nav-text">Antecedentes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Examenes/examenesP.html">
+                            <i class='bx bxs-vial icon' ></i>
+                            <span class="text nav-text">Exámenes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha" id="fecha-actual"></div>
+            <div class="card-profile">
+                <div class="text-profile">
+                    <p class="user-text" id="nombre-paciente"></p>
+                    <p class="user-text especiality-text">Paciente</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="tratamientos">
+            <div class="all-card">
+                <div class="upPart">Tratamientos Activos</div>
+                <div class="body-card">
+                    <div class="card-tratamiento">
+                        <div class="tille-date">
+                            <div class="title">
+                                Tratamiento 1
+                            </div>
+                            <div class="date">
+                                Generado por el <strong>Med. Halahabid</strong> el <strong>dd/mm/aaaa</strong> 
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <table class="med-list">
+                                <thead>
+                                    <tr>
+                                        <th>Medicamento</th>
+                                        <th>Dosis</th>
+                                        <th>Indicacion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Medicamento 1</td>
+                                        <td>200 ml</td>
+                                        <td>Tomar 30 min antes de cada comida.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medicamento 2</td>
+                                        <td>300ml</td>
+                                        <td>Tomar 30 min antes de cada comida.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medicamento 3</td>
+                                        <td>5mg</td>
+                                        <td>Tomar 30 min antes de cada comida.</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3">
+                                            <p><strong>Notas</strong></p>
+                                            <p class="notas">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="card-tratamiento">
+                        <div class="tille-date">
+                            <div class="title">
+                                Tratamiento 1
+                            </div>
+                            <div class="date">
+                                Generado por el <strong>Med. Halahabid</strong> el <strong>dd/mm/aaaa</strong> 
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <table class="med-list">
+                                <thead>
+                                    <tr>
+                                        <th>Medicamento</th>
+                                        <th>Dosis</th>
+                                        <th>Indicacion</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Medicamento 1</td>
+                                        <td>200 ml</td>
+                                        <td>Tomar 30 min antes de cada comida.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medicamento 2</td>
+                                        <td>300ml</td>
+                                        <td>Tomar 30 min antes de cada comida.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Medicamento 3</td>
+                                        <td>5mg</td>
+                                        <td>Tomar 30 min antes de cada comida.</td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="3">
+                                            <p><strong>Notas</strong></p>
+                                            <p class="notas">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris </p>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="all-card">
+                <div class="upPart">Tratamientos Pasados</div>
+                <div class="body-card">
+                    <div class="item">
+                        <div class="card-tratamiento-pasado" onclick="toggleAnswer(this)">
+                            <div class="title">Tratamiento pasado 1</div>
+                            <div class="date">Finalizado el dd/mm/aaaa</div>
+                            <div class="tog-d">Ver detalles
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                        </div>
+                        <div class="detail">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id sodales nisi. Nam ut quam justo. Mauris pretium, mauris eget semper placerat, odio neque suscipit massa, </p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card-tratamiento-pasado" onclick="toggleAnswer(this)">
+                            <div class="title">Tratamiento pasado 2</div>
+                            <div class="date">Finalizado el dd/mm/aaaa</div>
+                            <div class="tog-d">Ver detalles
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                        </div>
+                    </div>                    
+                    <div class="item">
+                        <div class="card-tratamiento-pasado" onclick="toggleAnswer(this)">
+                            <div class="title">Tratamiento pasado 3</div>
+                            <div class="date">Finalizado el dd/mm/aaaa</div>
+                            <div class="tog-d">Ver detalles
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="card-tratamiento-pasado" onclick="toggleAnswer(this)">
+                            <div class="title">Tratamiento pasado 4</div>
+                            <div class="date">Finalizado el dd/mm/aaaa</div>
+                            <div class="tog-d">Ver detalles
+                                <i class='bx bx-chevron-down'></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+ 
+    fetch('http://localhost:8080/api/v1/tratamientos/todos', {
+        method: 'GET',
+        headers: {
+            'Authorization': 'Bearer ' + localStorage.getItem('token') 
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+       
+        if (data.tratamientosActivos && data.tratamientosFinalizados) {
+            mostrarTratamientos(data.tratamientosActivos, data.tratamientosFinalizados);
+        } else {
+            
+            document.querySelector('.tratamientos').innerHTML = '<p>No tienes tratamientos registrados.</p>';
+        }
+    })
+    .catch(error => {
+        console.error('Error al obtener los tratamientos:', error);
+    });
+});
+
+function mostrarTratamientos(tratamientosActivos, tratamientosFinalizados) {
+    const contenedorTratamientosActivos = document.querySelector('.tratamientos .all-card:nth-child(1) .body-card');
+    const contenedorTratamientosFinalizados = document.querySelector('.tratamientos .all-card:nth-child(2) .body-card');
+
+
+    contenedorTratamientosActivos.innerHTML = '';
+    contenedorTratamientosFinalizados.innerHTML = '';
+
+  
+    tratamientosActivos.forEach(tratamiento => {
+        const cardTratamiento = `
+            <div class="card-tratamiento">
+                <div class="tille-date">
+                    <div class="title">${tratamiento.nombre}</div>
+                    <div class="date">Generado por el <strong>${tratamiento.medico}</strong> el <strong>${tratamiento.fechaGeneracion}</strong></div>
+                </div>
+                <div class="detail">
+                    <table class="med-list">
+                        <thead>
+                            <tr>
+                                <th>Medicamento</th>
+                                <th>Dosis</th>
+                                <th>Indicacion</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${tratamiento.recetas.map(receta => {
+                                return receta.dosis.map(dosis => {
+                                    return `
+                                        <tr>
+                                            <td>${dosis.medicamento}</td>
+                                            <td>${dosis.dosis}</td>
+                                            <td>${dosis.indicacion}</td>
+                                        </tr>
+                                    `;
+                                }).join('');
+                            }).join('')}
+                        </tbody>
+                    </table>
+                    <p><strong>Notas:</strong></p>
+                    <p class="notas">${tratamiento.notas}</p>
+                </div>
+            </div>
+        `;
+        contenedorTratamientosActivos.innerHTML += cardTratamiento;
+    });
+
+
+    tratamientosFinalizados.forEach(tratamiento => {
+        const cardTratamiento = `
+            <div class="card-tratamiento-pasado" onclick="toggleAnswer(this)">
+                <div class="title">${tratamiento.nombre}</div>
+                <div class="date">Finalizado el ${tratamiento.fechaFin}</div>
+                <div class="tog-d">Ver detalles <i class='bx bx-chevron-down'></i></div>
+            </div>
+            <div class="detail">
+                <p>${tratamiento.notas}</p>
+            </div>
+        `;
+        contenedorTratamientosFinalizados.innerHTML += cardTratamiento;
+    });
+}
+
+function toggleAnswer(element) {
+    const detail = element.nextElementSibling;
+    if (detail.style.display === 'none') {
+        detail.style.display = 'block';
+    } else {
+        detail.style.display = 'none';
+    }
+}
+function obtenerFechaActual() {
+            const fecha = new Date();
+            const opciones = { year: 'numeric', month: 'long', day: 'numeric' };
+            const fechaFormateada = fecha.toLocaleDateString('es-ES', opciones);
+            document.getElementById('fecha-actual').textContent = fechaFormateada;
+        }
+
+    
+        async function obtenerNombrePaciente() {
+            try {
+                const response = await fetch('http://localhost:8080/api/v1/paciente/usuario', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${localStorage.getItem('token')}`
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error('No se pudo obtener el nombre del paciente');
+                }
+
+                const usuario = await response.json(); 
+                document.getElementById('nombre-paciente').textContent = usuario.nombre;
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+      
+        window.onload = () => {
+            obtenerFechaActual();
+            obtenerNombrePaciente();
+            obtenerAntecedentes();
+        };
+    </script>
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+    <script src="/InnerSystem/Paciente/Tratamientos/tratamientosP.js"></script>
+</body>
+</html>

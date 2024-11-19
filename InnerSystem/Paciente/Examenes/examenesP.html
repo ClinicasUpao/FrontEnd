@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Paciente/Examenes/examenesP.css">
+    <!-- Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Paciente | Exámenes</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/projectCH_logo.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HistorialCitas/nuevacita.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Nueva Citas</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HistorialCitas/hCitas.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Historial de citas</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Paciente/HClinica/hClinica.html">
+                            <i class='bx bx-task icon'></i>
+                            <span class="text nav-text">Historia Clínica</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Tratamientos/tratamientosP.html">
+                            <i class='bx bxs-capsule icon' ></i>
+                            <span class="text nav-text">Tratamientos</span>
+                        </a> 
+                    </li><li class="nav-link">
+                        <a href="/InnerSystem/Paciente/Antecedentes/antcdP.html">
+                            <i class='bx bx-file icon' ></i>
+                            <span class="text nav-text">Antecedentes</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="active" href="#">
+                            <i class='bx bxs-vial icon' ></i>
+                            <span class="text nav-text">Exámenes</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="#">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha" id="fecha-actual"></div>
+            <div class="card-profile">
+                <div class="text-profile">
+                    <p class="user-text" id="nombre-paciente"></p>
+                    <p class="user-text especiality-text">Paciente</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="examenes">
+            <div class="title">Exámenes pendientes</div>
+            <div class="main-card">
+                <div class="examen-card">
+                    <span class="name">Exámen pendiente 1</span>
+                    <span class="date">Solicitado por el <strong>Med. Alab Hallahabid</strong> el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen pendiente 2</span>
+                    <span class="date">Solicitado por el <strong>Med. Alab Hallahabid</strong> el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen pendiente 3</span>
+                    <span class="date">Solicitado por el <strong>Med. Alab Hallahabid</strong> el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen pendiente 4</span>
+                    <span class="date">Solicitado por el <strong>Med. Alab Hallahabid</strong> el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+            </div>
+            <div class="title">Exámenes realizados</div>
+            <div class="main-card">
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 1</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 2</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 3</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 4</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 5</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 6</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 7</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+                <div class="examen-card">
+                    <span class="name">Exámen realizado 8</span>
+                    <span class="date">Realizado el <strong>dd/mm/aaaa</strong></span>
+                    <span class="opc">Ver detalles
+                        <i class='bx bx-chevron-right' ></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+</body>
+</html>

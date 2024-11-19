@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Components/SideBar/sBar_Styles.css">
+    <link rel="stylesheet" href="/Components/SideBar/upBar.css">
+    <link rel="stylesheet" href="/InnerSystem/Medico/HC-detalles/hc-detalles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Médico | Lista HC | Paciente</title>
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="/imgs/logo-med.png" alt="logo">
+                </span>
+                <div class="text header-text">
+                    <span class="title">Project HC</span>
+                    <span class="subtitle">Sistema Médico</span>
+                </div>
+            </div>
+            <i class='bx bx-chevron-left toggle t-closed'></i>
+            <i class='bx bx-chevron-right toggle t-light'></i>
+        </header>
+        <div class="menu-bar">
+            <div class="menu">
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bxs-dashboard icon'></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="/InnerSystem/Medico/agenda/agenda.html">
+                            <i class='bx bx-calendar icon'></i>
+                            <span class="text nav-text">Agenda</span>
+                        </a>
+                    </li><li class="nav-link">
+                        <a class="active" href="/InnerSystem/Medico/Lista/listaHC.html">
+                            <i class='bx bxs-book-alt icon'></i>
+                            <span class="text nav-text">Lista de Historias</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-content">
+            <li class="nav-link">
+                <a href="/InnerSystem/Principal/login.html">
+                    <i class='bx bx-log-out icon' ></i>
+                    <span class="text nav-text">Cerrar Sesión</span>
+                </a>
+            </li>
+            <li class="nav-link">
+                <a href="/InnerSystem/Medico/Perfil-Med/Info/perfil-med.html">
+                    <i class='bx bx-cog icon'></i>
+                    <span class="text nav-text">Configuración</span>
+                </a>
+            </li>
+            <li class="mode">
+               <div class="moon-sun">
+                   <i class='bx bxs-moon icon moon' ></i>
+                   <i class='bx bxs-sun icon sun' ></i>
+               </div>
+               <span class="text nav-text">Dark mode</span>
+               <div class="toggle-switch">                        
+                   <span class="switch"></span>
+               </div>
+            </li>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="upBar">
+            <div class="fecha">
+                /dd de month, aaaa
+            </div>
+            <div class="card-profile">
+                <img class="med-icon" src="/imgs/med-icon.png" alt="">
+                <div class="text-profile">
+                    <p class="user-text">Matt Denver Stone</p>
+                    <p class="user-text especiality-text">Paciente</p>
+                </div>
+                <img src="/imgs/profile-up.png" alt="">
+            </div>
+        </div>
+        <div class="lista-HC">
+            <div class="info-antcd">
+                <div class="info-card">
+                    <img src="/imgs/profile-2.png" alt="Foto del paciente">
+                    <p class="nombres"></p> 
+                    <p class="apellidos"></p> <!-- Apellido del paciente -->
+                    <div class="main-data">
+                        <p class="rol">Paciente</p>
+                        <p class="short-data"></p> <!-- Género y edad del paciente -->
+                    </div>
+                    <p class="description"></p> <!-- Descripción del paciente -->
+                    <hr>
+                    <div class="contact-info">
+                        <p><i class='bx bx-home'></i> <span class="direccion"></span></p> <!-- Dirección -->
+                        <p><i class='bx bx-envelope'></i> <span class="email"></span></p> <!-- Correo electrónico -->
+                        <p><i class='bx bx-phone'></i> <span class="telefono"></span></p> <!-- Teléfono -->
+                    </div>
+                </div>
+                <div class="antcd-card">
+                    <div class="head-card">
+                        <div class="title">Antedentes</div>
+                        <button onclick="abrirModal()" id="btn-abrir-modal" href=""><i class='bx bx-plus' ></i> Nuevo antecedente</button>
+                        <dialog id="antcd-modal" class="">
+                            <div class="cita-form-cont">
+                                <div class="title-form">
+                                    <h2>Registro de nuevo antecedente</h2>
+                                    <p><strong>Martes 3:00pm - 05/11/2024</strong></p>
+                                </div>
+                                <form>
+                                    <div class="form-group">
+                                        <div class="item">
+                                            <label for="cita">Tipo:</label>
+                                            <select id="cita" name="cita" required>
+                                                <option value="" selected>Seleccionar</option>
+                                                <option value="PERSONALES_PATOLOGICOS">Personal patológico</option>
+                                                <option value="FAMILIARES">Familiar</option>
+                                                <option value="HABITOS_SALUDABLES">Hábito saludable</option>
+                                                <option value="HABITOS_NOCIVOS">Hábito nocivo</option>
+                                                <option value="VIAJES_TRABAJO">Viaje / Trabajo</option>
+                                                <option value="CONDICION_PSIQUIATRICA">Condición psiquiátrica</option>
+                                                <option value="VACUNA">Vacuna</option>
+                                                <option value="HOSPITALIZACIONES">Hospitalización</option>
+                                                <option value="ALERGIA_ALIMENTARIA">Alergia alimentaria</option>
+                                                <option value="ALERGIA_AMBIENTAL">Alergia ambiental</option>
+                                                <option value="ALERGIA_FARMACOLOGICA">Alergia farmacológica</option>
+                                            </select>
+                                        </div>
+                                        
+                                        <div class="item">
+                                            <label for="cita">Estado:</label>
+                                            <select id="estado">
+                                                <option value="CON_TRATAMIENTO">Con Tratamiento</option>
+                                                <option value="CURADO">Curado</option>
+                                                <option value="CON_RECAIDAS">Con Recaídas</option>
+                                                <option value="EVITAR">Evitar</option>
+                                                <option value="NO_TRATAMIENTO">No Tratamiento</option>
+                                            </select>
+                                            
+                                        </div>
+                                    </div>                       
+                                    <div class="form-group-bottom">
+                                        <label for="examen">Breve descripción:</label>
+                                        <input type="text" id="examen" name="examen">
+                                        
+                                        <label for="detalle">Detalle del antecedente:</label>
+                                        <textarea id="detalle" name="detalle"></textarea>
+                                    </div>                       
+                                    <div class="form-actions">
+                                        <button onclick="cerrarModal()" type="reset" class="btn-cancel">Cancelar</button>
+                                        <button type="submit" class="btn-register">Registrar</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </dialog>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Registro</th>
+                            <th>Tipo</th>
+                            <th>Descripción</th>
+                            <th>Estado</th>
+                        </tr>
+                        <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Personal patológico</td>
+                            <td>Baricela</td>
+                            <td>Con tratamiento</td>
+                        </tr>
+                        <tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Familiar</td>
+                            <td>Hipertensión Arterial</td>
+                            <td>Curado</td>
+                        </tr>
+                            <td>dd/mm/aaaa</td>
+                            <td>Alergia farmacológica</td>
+                            <td>Aines</td>
+                            <td>Con recaidas</td>
+                        </tr>
+                    </table>
+                    <div class="detail">
+                        <div class="up">
+                            <div class="title">Detalle</div>
+                            <div class="med-antcd"><strong>Registrado por:</strong> Med. Alaba Halahabid</div>
+                        </div>
+                        <div class="text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo, eu ullamcorper urna massa at arcu. Aenean euismod dui urna, id eleifend metus condimentum auctor. Fusce metus metus, aliquam id nunc non.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="registro-atenciones">
+                <div class="title">Registro de Atenciones</div>
+                <button onclick="abrirModal2()" class="btn-new-reg">Nuevo registro de atención</button>
+                <dialog id="datos-cita-modal" class="">
+                    <div class="cita-form-cont">
+                        <div class="title-form">
+                            <h2>Formulario de atención</h2>
+                            <p><strong>Martes 3:00pm - 05/11/2024</strong> con <strong>Diogho Matteo Baylón Toledo</strong></p>
+                        </div>
+                        <form>
+                            <div class="form-group">
+                                <div class="item">
+                                    <label for="motivo">Motivo:</label>
+                                    <input type="text" id="motivo" name="motivo" required>
+                                </div>
+                                <div class="item">
+                                    <label for="cita">Cita:</label>
+                                    <select id="cita" name="cita" required>
+                                        <option value="" selected>Seleccionar</option>
+                                        <option value="nueva" id="nueva" selected>Nueva consulta</option>
+                                        <option value="seguimiento" id="seguimiento" selected>De seguimiento</option>
+                                    </select>
+                                </div>
+                            </div>                
+                            <div class="center">
+                                <div class="form-group-left">
+                                    <div class="item">
+                                        <label for="anamnesis">Anamnesis:</label>
+                                        <textarea id="anamnesis" name="anamnesis" required></textarea>
+                                    </div>
+                                    <div class="item">
+                                        <label for="notas">Notas:</label>
+                                        <textarea id="notas" name="notas" required></textarea>
+                                    </div>
+                                </div>                   
+                                <div class="form-group-right item">
+                                    <label for="sintomas">Síntomas:</label>
+                                    <textarea id="sintomas" name="sintomas" required></textarea>
+                                </div>
+                            </div>                
+                            <div class="form-group">
+                                <div class="item">
+                                    <label for="diagnostico">Diagnóstico:</label>
+                                    <input type="text" id="diagnostico" name="diagnostico">
+                                </div>
+                                <div class="item">
+                                    <label for="tipo">Tipo:</label>
+                                    <select id="tipo" name="tipo" required>
+                                        <option value="" selected>Seleccionar</option>
+                                        <option value="presuntivo" id="presuntivo" selected>Presuntivo</option>
+                                        <option value="definitivo" id="definitivo" selected>Definitivo</option>
+                                        <option value="NA" id="NA" selected>Sin diagnóstico</option>
+                                    </select>              
+                                </div>
+                            </div>              
+                            <hr>
+                            <div class="form-group-bottom">
+                                <label for="examen">Examen solicitado:</label>
+                                <input type="text" id="examen" name="examen">
+                                
+                                <label for="detalle">Detalle de examen:</label>
+                                <textarea id="detalle" name="detalle"></textarea>
+                            </div>
+                
+                            <div class="form-actions">
+                                <button type="button" class="btn-examen">No / Solicitar examen</button>
+                                <button onclick="cerrarModal2()"  type="reset" class="btn-cancel">Cancelar</button>
+                                <button type="submit" class="btn-register">Registrar</button>
+                            </div>
+                        </form>
+                    </div>
+                </dialog>
+                <div class="lista-atenciones">
+                    <div class="item">
+                        <div class="fecha-hora">Martes 3:00pm - 05/11/2024</div>
+                        <p><strong>Motivo:</strong> Dolor de estómago</p>
+                        <p><strong>Diagnóstico (presuntivo):</strong> Gatritis por Helicobacter</p>
+                    </div>
+                    <div class="item">
+                        <div class="fecha-hora">Martes 3:00pm - 05/11/2024</div>
+                        <p><strong>Motivo:</strong> Dolor de estómago</p>
+                        <p><strong>Diagnóstico (presuntivo):</strong> Gatritis por Helicobacter</p>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="left">
+                        <div class="up-center">
+                            <div class="up">
+                                <div class="title">Detalle</div>
+                                <div class="med-hc"><strong>Registrado por:</strong> Med. Alaba Halahabid</div>
+                            </div>
+                            <div class="left-center">
+                                <p><strong>Anamesis:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo, eu ullamcorper urna massa at arcu.</p>
+                                <p><strong>Notas:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ornare, elit non ultrices dignissim, risus erat iaculis justo, eu ullamcorper urna massa at arcu
+                                    Fusce metus metus, aliquam id nunc non.massa at arcu. Aenean euismod.</p>
+                            </div>
+                        </div>
+                        <div class="left-bottom">
+                            <p><strong>Analisis solicitado:</strong> Test de aliento.</p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="sintomas-title">Sintomas:</div>
+                        <ul>
+                            <li>Dolor o malestar en la región epigástrica.</li>
+                            <li>Náuseas frecuentes.</li>
+                            <li>Pérdida de apetito.</li>
+                            <li>Sensación de indigestión y plenitud postprandial.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="/Components/SideBar/sBar_Script.js"></script>
+    <script src="/InnerSystem/Medico/HC-detalles/hc-detalles.js"></script>
+</body>
+</html>
